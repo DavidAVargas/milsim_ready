@@ -1,35 +1,63 @@
 import Link from "next/link";
 
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Newbie Guide", href: "/newbie" },
-  { label: "Events", href: "/events" },
-  { label: "Team", href: "/team" },
-];
-
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-background px-4 py-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 sm:flex-row sm:justify-between">
-        <span className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-          MILSIM
-        </span>
+    <footer className="border-t border-border bg-background">
+      <div className="mx-auto max-w-6xl px-4 py-12">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+          {/* Brand */}
+          <div className="flex flex-col gap-3">
+            <p className="font-mono text-xs tracking-[0.3em] uppercase text-tactical">
+              // UNIT
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              A milsim team built for the long op. 40 to 72 hours in the field —
+              rain, cold, and all.
+            </p>
+          </div>
 
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          {NAV_LINKS.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className="font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
+          {/* Quick links */}
+          <div className="flex flex-col gap-3">
+            <p className="font-mono text-xs tracking-[0.3em] uppercase text-tactical">
+              // NAVIGATE
+            </p>
+            <ul className="flex flex-col gap-2">
+              {[
+                { label: "Newbie Guide", href: "/newbie" },
+                { label: "Events", href: "/events" },
+                { label: "Team", href: "/team" },
+              ].map(({ label, href }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <p className="font-mono text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} MILSIM
-        </p>
+          {/* Status */}
+          <div className="flex flex-col gap-3">
+            <p className="font-mono text-xs tracking-[0.3em] uppercase text-tactical">
+              // STATUS
+            </p>
+            <p className="font-mono text-xs text-muted-foreground">
+              OPERATIONS: ACTIVE
+            </p>
+            <p className="font-mono text-xs text-muted-foreground">
+              NEXT EVENT: TBD
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-border pt-6">
+          <p className="font-mono text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} MILSIM — ALL RIGHTS RESERVED
+          </p>
+        </div>
       </div>
     </footer>
   );
