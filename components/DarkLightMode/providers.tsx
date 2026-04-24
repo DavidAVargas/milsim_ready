@@ -2,13 +2,17 @@
 
 import { ThemeProvider, useTheme } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeToggle } from "@/components/DarkLightMode/theme-toggle";
 
-// Site is dark-only — forcedTheme locks next-themes so no toggle is needed.
+// ThemeProvider must SSR so next-themes injects its inline script in HTML; deferring it to post-hydration triggers React 19's client <script> warning.
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" forcedTheme="dark">
+    <ThemeProvider enableSystem attribute="class" defaultTheme="system">
       {children}
       <ToasterProvider />
+      <div className="fixed right-6 bottom-6">
+        <ThemeToggle />
+      </div>
     </ThemeProvider>
   );
 }
