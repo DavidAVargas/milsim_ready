@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, ListChecks, Backpack, Crosshair, Radio, FileText, Users } from "lucide-react";
 import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
@@ -12,42 +12,42 @@ const SECTIONS = [
   {
     slug: "before-you-go",
     number: "01",
-    emoji: "📋",
+    Icon: ListChecks,
     title: "Before You Go",
     description: "Waiver, check-in time, what to pack the day of. Don't show up unprepared.",
   },
   {
     slug: "gear",
     number: "02",
-    emoji: "🎒",
+    Icon: Backpack,
     title: "Gear Guide",
     description: "What you actually need for a 40–72 hr op. Budget picks included.",
   },
   {
     slug: "tactics",
     number: "03",
-    emoji: "🎯",
+    Icon: Crosshair,
     title: "Tactics 101",
     description: "Basic movement and cover so you don't get your squad wiped in hour one.",
   },
   {
     slug: "lingo",
     number: "04",
-    emoji: "📻",
+    Icon: Radio,
     title: "Platoon Lingo",
     description: "Commands your PL will yell. Learn them before the op, not during.",
   },
   {
     slug: "tacsop",
     number: "05",
-    emoji: "📖",
+    Icon: FileText,
     title: "TACSOP Simplified",
     description: "MSW rules cut down to what actually matters. No walls of text.",
   },
   {
     slug: "factions",
     number: "06",
-    emoji: "🪖",
+    Icon: Users,
     title: "Factions",
     description: "NATO, RUFOR, and who else is on the field. Know your side before you show up.",
   },
@@ -76,24 +76,28 @@ export default function MilsimWestPage() {
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {SECTIONS.map((section) => (
+        {SECTIONS.map(({ slug, number, Icon, title, description }) => (
           <Link
-            key={section.slug}
-            href={`/newbie/milsim-west/${section.slug}`}
+            key={slug}
+            href={`/newbie/milsim-west/${slug}`}
             className="group relative flex flex-col gap-4 border border-border bg-card p-5 transition-all hover:border-tactical hover:-translate-y-0.5 hover:shadow-lg"
           >
-            <span className="text-4xl leading-none">{section.emoji}</span>
+            {/* Icon — inherits foreground color, goes red in dark mode automatically */}
+            <Icon size={28} className="text-foreground transition-colors group-hover:text-tactical" />
+
             <span className="absolute right-4 top-4 font-mono text-xs text-muted-foreground/40">
-              {section.number}
+              {number}
             </span>
+
             <div>
               <h2 className="font-mono text-base font-bold text-foreground transition-colors group-hover:text-tactical">
-                {section.title}
+                {title}
               </h2>
               <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                {section.description}
+                {description}
               </p>
             </div>
+
             <div className="mt-auto flex items-center gap-1 font-mono text-xs tracking-widest uppercase text-tactical opacity-0 transition-opacity group-hover:opacity-100">
               OPEN <ChevronRight size={12} />
             </div>
