@@ -220,12 +220,11 @@ export default function BeforeYouGoPage() {
               Milsim looks cool from the outside — and it is — but the physical reality hits different once you're in it. You're carrying a loaded vest and a replica for potentially 24 hours straight, moving through terrain, staying alert, and doing it all while sleep deprived. Body shock is real. People have blacked out and thrown up within the first 30 minutes. This isn't meant to scare you — it's meant to make sure you actually show up ready.
             </p>
             <p>
-              Your fitness level directly affects your squad. One person who can't keep up slows everyone down and puts the team at a disadvantage. Put in the work before the event and you'll enjoy it a lot more.
+              Your fitness level directly affects your squad. One person who can't keep up slows everyone down and puts the team at a disadvantage. Start training with your actual gear — vest, replica, pack — so your body isn't shocked the moment the op starts. Put in the work before the event and you'll enjoy it a lot more.
             </p>
             <div className="grid gap-2 sm:grid-cols-2">
               {[
                 { label: "Go running", detail: "Be comfortable running 3 miles straight before the event. This op is a physical challenge — your cardio will be tested." },
-                { label: "Train with weight", detail: "Practice walking or running with a weighted vest or your actual gear so your body isn't shocked on game day." },
                 { label: "Practice rucking", detail: "Rucking means moving with your full kit — replica, vest, and a loaded pack on your back. Depending on the event you could ruck anywhere from 2 to 8 miles in a single day. Get comfortable carrying that weight before you show up, not during." },
                 { label: "Break in your boots", detail: "Do not show up in a fresh pair of boots. Wear them on runs and walks beforehand — blisters 10 hours into an op are brutal." },
                 { label: "Get sleep before", detail: "You're going to be up all night. Don't show up already running on empty." },
