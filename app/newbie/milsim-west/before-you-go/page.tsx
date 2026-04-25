@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 const ARRIVAL_CHECKLIST = [
   "Printed deployment orders (in a ziplock bag — keep them dry)",
   "Valid government-issued photo ID",
-  "All red-highlighted gear from your deployment orders packing list",
-  "Airsoft replica + magazines (no BBs — they are provided at the event)",
+  "All red-highlighted gear from your deployment orders",
+  "Airsoft replica + magazines (no BBs — provided at the event)",
   "Red light flashlight (no white lights at night)",
-  "Cash (~$50 for food, patches, etc.)",
+  "Cash (~$50 for patches and miscellaneous)",
   "Personal medications",
 ];
 
@@ -61,11 +61,10 @@ export default function BeforeYouGoPage() {
               <span className="font-semibold text-foreground">Check your email and print them the moment they arrive.</span>
             </p>
             <p>
-              Your orders contain your faction assignment, rules of engagement, and a gear checklist. All items highlighted in red on that list are{" "}
-              <span className="font-semibold text-foreground">mandatory</span> — show up missing any of them and you will be turned away. Items in black are recommended but optional.
+              Your orders are a printed document with the event name, address, and a checklist at the bottom. That checklist is what the cadre uses during back check-in — they go through each item and initial it off. You need every red item on that list checked and signed before you can play.
             </p>
             <p>
-              During the game, any leader or cadre can stop you at any time and ask to see your papers. If your gear check isn't signed off you're out of the game mid-op. Keep your orders on you at all times.
+              During the game, any leader or cadre can stop you at any time and ask to see your orders. If your check isn't signed off or your paper is gone, you're out mid-op. Keep them on you at all times.
             </p>
             <div className="mt-1 rounded border border-border bg-background px-3 py-2">
               <span className="font-semibold text-foreground">First timer tip:</span> Put your deployment orders in a ziplock sandwich bag before you leave. Rain, sweat, river crossings — anything can destroy paper out in the field. If a leader asks for your orders and the paper is destroyed, you're getting kicked. Keep them dry.
@@ -73,30 +72,7 @@ export default function BeforeYouGoPage() {
           </div>
         </div>
 
-        {/* Arrival Time */}
-        <div className="border border-border bg-card p-6">
-          <div className="mb-4 flex items-center gap-3">
-            <Clock size={18} className="shrink-0 text-tactical" />
-            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-              When to Arrive
-            </h2>
-          </div>
-          <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
-            <p>
-              In-processing opens at <span className="font-semibold text-foreground">1400 (2:00 PM)</span> and closes at{" "}
-              <span className="font-semibold text-foreground">1800 (6:00 PM)</span>.{" "}
-              <span className="font-semibold text-foreground">Do not arrive before 1400</span> — the venue is private property.
-            </p>
-            <p>
-              The game officially kicks off around <span className="font-semibold text-foreground">2200–0000 (10 PM – midnight)</span>, so you'll have several hours after check-in before it starts. You're going to be up all night — if you think about it, you're essentially awake for two full days straight.
-            </p>
-            <div className="mt-1 rounded border border-border bg-background px-3 py-2">
-              <span className="font-semibold text-foreground">First timer tip:</span> Arrive early around 1400–1500. Use that extra time to talk to the people in your platoon, eat something, hydrate, and mentally prepare. Just relax — because once the game starts, that's it.
-            </div>
-          </div>
-        </div>
-
-        {/* Check-in Process */}
+        {/* Check-in Process — intentionally before When to Arrive */}
         <div className="border border-border bg-card p-6">
           <div className="mb-4 flex items-center gap-3">
             <MapPin size={18} className="shrink-0 text-tactical" />
@@ -108,7 +84,6 @@ export default function BeforeYouGoPage() {
             <p>
               Before the event, join the <span className="font-semibold text-foreground">MSW Facebook group for your faction</span>. Your platoon assignment will be posted there — know it before you arrive.
             </p>
-
             <ol className="flex flex-col gap-3">
               {[
                 {
@@ -117,11 +92,11 @@ export default function BeforeYouGoPage() {
                 },
                 {
                   step: "02",
-                  text: "Find the bag check-in area. There will be a group of people with a cadre calling out items from the packing list — that's where you lay your gear out for inspection, not where you lined up with your platoon.",
+                  text: "Find the bag check-in area. There will be a group of people with a cadre calling out items — that's where you lay your gear out for inspection, not just where you lined up with your platoon.",
                 },
                 {
                   step: "03",
-                  text: "The cadre inspects all red-highlighted items and initials them off on your orders. Once every item is checked, you're cleared to move on.",
+                  text: "The cadre goes through all the red-highlighted items and initials them off on your orders. Once everything is checked, you're cleared.",
                 },
                 {
                   step: "04",
@@ -138,7 +113,6 @@ export default function BeforeYouGoPage() {
                 </li>
               ))}
             </ol>
-
             <div className="mt-2 flex flex-wrap gap-3">
               <Link
                 href="/newbie/milsim-west/gear"
@@ -156,6 +130,32 @@ export default function BeforeYouGoPage() {
           </div>
         </div>
 
+        {/* When to Arrive */}
+        <div className="border border-border bg-card p-6">
+          <div className="mb-4 flex items-center gap-3">
+            <Clock size={18} className="shrink-0 text-tactical" />
+            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
+              When to Arrive
+            </h2>
+          </div>
+          <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+            <p>
+              In-processing opens at <span className="font-semibold text-foreground">1400 (2:00 PM)</span> and closes at{" "}
+              <span className="font-semibold text-foreground">1800 (6:00 PM)</span>.{" "}
+              <span className="font-semibold text-foreground">Do not arrive before 1400</span> — the venue is private property.
+            </p>
+            <p>
+              The game kicks off around <span className="font-semibold text-foreground">2200–0000 (10 PM – midnight)</span>. Be prepared — you could be up all night, which is pretty much a full 24 hours on your feet by the time the game is over.
+            </p>
+            <div className="rounded border border-border bg-background px-3 py-2">
+              <span className="font-semibold text-foreground">First timer tip:</span> Arrive early around 1400–1500. After check-in, eat, hydrate, talk to your platoon — and if there's downtime, take a nap. Seriously. You're going to need it. Alternatively, if you're not far from the venue, arriving a little later gives you more time to rest at home before the long night ahead.
+            </div>
+            <div className="rounded border border-border bg-background px-3 py-2">
+              <span className="font-semibold text-foreground">Bonus tip:</span> Bring a separate water bottle and snacks that are NOT part of your game gear. You'll be on site for several hours before the game even starts — don't burn through your field rations just sitting around waiting. Eat before you go and keep your game food and water sealed for the actual op.
+            </div>
+          </div>
+        </div>
+
         {/* Chrono */}
         <div className="border border-border bg-card p-6">
           <div className="mb-4 flex items-center gap-3">
@@ -166,7 +166,8 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              MSW does not allow DMRs — standard AEGs only. Check your specific event's deployment orders for the exact FPS limit.
+              Standard AEGs follow the same rules as any airsoft field —{" "}
+              <span className="font-semibold text-foreground">under 400 FPS</span>. Check your specific event's orders for the exact limit.
             </p>
             <div className="flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-3 py-2">
               <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
@@ -177,6 +178,7 @@ export default function BeforeYouGoPage() {
             </div>
           </div>
         </div>
+
       </div>
 
       {/* Packing checklist */}
