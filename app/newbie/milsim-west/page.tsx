@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -54,9 +55,7 @@ const SECTIONS = [
 
 export default function MilsimWestPage() {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16">
-
-      {/* Back button */}
+    <PageContainer>
       <Link
         href="/newbie"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
@@ -76,7 +75,6 @@ export default function MilsimWestPage() {
         friction, and zero handholding. Pick a section and get ready.
       </p>
 
-      {/* Section cards */}
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {SECTIONS.map((section) => (
           <Link
@@ -84,15 +82,10 @@ export default function MilsimWestPage() {
             href={`/newbie/milsim-west/${section.slug}`}
             className="group relative flex flex-col gap-4 border border-border bg-card p-5 transition-all hover:border-tactical hover:-translate-y-0.5 hover:shadow-lg"
           >
-            {/* Emoji */}
             <span className="text-4xl leading-none">{section.emoji}</span>
-
-            {/* Number */}
             <span className="absolute right-4 top-4 font-mono text-xs text-muted-foreground/40">
               {section.number}
             </span>
-
-            {/* Text */}
             <div>
               <h2 className="font-mono text-base font-bold text-foreground transition-colors group-hover:text-tactical">
                 {section.title}
@@ -101,14 +94,12 @@ export default function MilsimWestPage() {
                 {section.description}
               </p>
             </div>
-
-            {/* Arrow */}
             <div className="mt-auto flex items-center gap-1 font-mono text-xs tracking-widest uppercase text-tactical opacity-0 transition-opacity group-hover:opacity-100">
               OPEN <ChevronRight size={12} />
             </div>
           </Link>
         ))}
       </div>
-    </div>
+    </PageContainer>
   );
 }

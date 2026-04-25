@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight, ChevronLeft, Lock } from "lucide-react";
+import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,8 +29,7 @@ const ORGS = [
 
 export default function NewbiePage() {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16">
-      {/* Back button */}
+    <PageContainer>
       <Link
         href="/"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
@@ -38,7 +38,6 @@ export default function NewbiePage() {
         BACK TO HOME
       </Link>
 
-      {/* Header */}
       <p className="mb-3 font-mono text-xs tracking-[0.3em] uppercase text-tactical">
         // NEWBIE GUIDE
       </p>
@@ -51,7 +50,6 @@ export default function NewbiePage() {
         full breakdown.
       </p>
 
-      {/* Org cards */}
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         {ORGS.map((org) =>
           org.available ? (
@@ -101,6 +99,6 @@ export default function NewbiePage() {
           )
         )}
       </div>
-    </div>
+    </PageContainer>
   );
 }
