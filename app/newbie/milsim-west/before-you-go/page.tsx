@@ -202,7 +202,7 @@ export default function BeforeYouGoPage() {
               ))}
             </ul>
             <div className="mt-1 rounded border border-border bg-background px-3 py-2">
-              <span className="font-semibold text-foreground">Tip:</span> Keep both your deployment orders and medical card in the same ziplock bag and store it in your left chest pocket. If something happens in the field, that's the first place anyone is going to look — make it easy to find fast.
+              <span className="font-semibold text-foreground">Tip:</span> Keep both your deployment orders and medical card in the same ziplock bag and store it in your left shoulder pocket. If something happens in the field, that's the first place anyone is going to look — make it easy to find fast.
             </div>
           </div>
         </div>
@@ -226,6 +226,7 @@ export default function BeforeYouGoPage() {
               {[
                 { label: "Go running", detail: "Be comfortable running 3 miles straight before the event. This op is a physical challenge — your cardio will be tested." },
                 { label: "Train with weight", detail: "Practice walking or running with a weighted vest or your actual gear so your body isn't shocked on game day." },
+                { label: "Practice rucking", detail: "Rucking means moving with your full kit — replica, vest, and a loaded pack on your back. Depending on the event you could ruck anywhere from 2 to 8 miles in a single day. Get comfortable carrying that weight before you show up, not during." },
                 { label: "Break in your boots", detail: "Do not show up in a fresh pair of boots. Wear them on runs and walks beforehand — blisters 10 hours into an op are brutal." },
                 { label: "Get sleep before", detail: "You're going to be up all night. Don't show up already running on empty." },
               ].map(({ label, detail }) => (
