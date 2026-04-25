@@ -21,7 +21,7 @@ export function ThemeToggle() {
   return (
     <Button
       size="icon"
-      className="group cursor-pointer"
+      className="group cursor-pointer bg-black text-white hover:bg-neutral-800 border-none"
       onClick={() => {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
       }}
