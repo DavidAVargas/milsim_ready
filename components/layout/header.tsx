@@ -32,7 +32,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className={`text-xs font-medium tracking-widest uppercase transition-colors hover:text-tactical ${
+              className={`text-sm font-bold tracking-widest uppercase transition-colors hover:text-tactical ${
                 pathname === href
                   ? "text-tactical"
                   : "text-muted-foreground"
@@ -61,7 +61,7 @@ export default function Header() {
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className={`text-xs font-medium tracking-widest uppercase transition-colors hover:text-tactical ${
+              className={`text-sm font-bold tracking-widest uppercase transition-colors hover:text-tactical ${
                 pathname === href
                   ? "text-tactical"
                   : "text-muted-foreground"
