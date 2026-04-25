@@ -217,7 +217,7 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              Milsim looks cool from the outside — and it is — but the physical reality hits different once you're in it. You're carrying a loaded vest and a replica for potentially 24 hours straight, moving through terrain, staying alert, and doing it all while sleep deprived. Body shock is real. People have blacked out and thrown up within the first 30 minutes. This isn't meant to scare you — it's meant to make sure you actually show up ready.
+              Milsim looks cool from the outside — and it is — but the physical reality hits different once you're in it. You're carrying a loaded vest and a replica for over 24 hours straight, moving through terrain, staying alert, and doing it all while sleep deprived. Body shock is real. People have blacked out and thrown up within the first 30 minutes. This isn't meant to scare you — it's meant to make sure you actually show up ready.
             </p>
             <p>
               Your fitness level directly affects your squad. One person who can't keep up slows everyone down and puts the team at a disadvantage. Start training with your actual gear — vest, replica, pack — so your body isn't shocked the moment the op starts. Put in the work before the event and you'll enjoy it a lot more.
