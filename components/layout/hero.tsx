@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden bg-background px-4 text-center">
+    <section className="relative flex min-h-[calc(100dvh-3.5rem)] flex-col items-center justify-center overflow-hidden bg-background px-4 text-center">
       {/* Grid overlay for tactical feel */}
       <div
         aria-hidden
