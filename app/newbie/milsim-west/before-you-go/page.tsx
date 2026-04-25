@@ -9,15 +9,12 @@ export const metadata: Metadata = {
 };
 
 const ARRIVAL_CHECKLIST = [
-  "Printed deployment orders (sent via email — keep an eye on your inbox)",
+  "Printed deployment orders (in a ziplock bag — keep them dry)",
   "Valid government-issued photo ID",
-  "All red-highlighted gear from the TACSOP packing list",
-  "Airsoft replica + magazines + BBs",
-  "Radio + batteries",
-  "Sleeping gear (sleeping bag, pad, tent or tarp)",
-  "Food & water for the full op",
+  "All red-highlighted gear from your deployment orders packing list",
+  "Airsoft replica + magazines (no BBs — they are provided at the event)",
   "Red light flashlight (no white lights at night)",
-  "Cash (some vendors on site)",
+  "Cash (~$50 for food, patches, etc.)",
   "Personal medications",
 ];
 
@@ -60,17 +57,19 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              MSW will send your deployment orders to the email you used to buy your ticket — sometimes weeks in advance, sometimes the day before. <span className="font-semibold text-foreground">Check your email and print them the moment they arrive.</span>
+              MSW will send your deployment orders to the email you used to buy your ticket — sometimes weeks in advance, sometimes the day before.{" "}
+              <span className="font-semibold text-foreground">Check your email and print them the moment they arrive.</span>
             </p>
             <p>
-              Your orders contain your faction assignment, rules of engagement, and a gear checklist. All items highlighted in red on that list are <span className="font-semibold text-foreground">mandatory</span> — show up missing any of them and you will be turned away and told not to come back until you have everything.
+              Your orders contain your faction assignment, rules of engagement, and a gear checklist. All items highlighted in red on that list are{" "}
+              <span className="font-semibold text-foreground">mandatory</span> — show up missing any of them and you will be turned away. Items in black are recommended but optional.
             </p>
             <p>
-              Items in black are recommended but optional. Don't stress those — focus on the red ones first.
+              During the game, any leader or cadre can stop you at any time and ask to see your papers. If your gear check isn't signed off you're out of the game mid-op. Keep your orders on you at all times.
             </p>
-            <p>
-              During the game, any leader or cadre can stop you at any time and ask to see your papers. If your gear check isn't signed off, you're out of the game — mid-op. Keep your orders on you.
-            </p>
+            <div className="mt-1 rounded border border-border bg-background px-3 py-2">
+              <span className="font-semibold text-foreground">First timer tip:</span> Put your deployment orders in a ziplock sandwich bag before you leave. Rain, sweat, river crossings — anything can destroy paper out in the field. If a leader asks for your orders and the paper is destroyed, you're getting kicked. Keep them dry.
+            </div>
           </div>
         </div>
 
@@ -84,15 +83,16 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              In-processing opens at <span className="font-semibold text-foreground">1400 (2:00 PM)</span> and closes at <span className="font-semibold text-foreground">1800 (6:00 PM)</span>.{" "}
+              In-processing opens at <span className="font-semibold text-foreground">1400 (2:00 PM)</span> and closes at{" "}
+              <span className="font-semibold text-foreground">1800 (6:00 PM)</span>.{" "}
               <span className="font-semibold text-foreground">Do not arrive before 1400</span> — the venue is private property.
             </p>
             <p>
-              The game officially kicks off around <span className="font-semibold text-foreground">2200–0000 (10 PM–midnight)</span>, so you'll have several hours to get settled after check-in.
+              The game officially kicks off around <span className="font-semibold text-foreground">2200–0000 (10 PM – midnight)</span>, so you'll have several hours after check-in before it starts. You're going to be up all night — if you think about it, you're essentially awake for two full days straight.
             </p>
-            <p className="rounded border border-border bg-background px-3 py-2">
-              <span className="font-semibold text-foreground">First timer tip:</span> Arrive early — around 1400–1500. Use the extra time to set up your sleeping area, eat, hydrate, and mentally prep before the game starts. You don't want to be rushing through check-in and setting up camp in the dark right before op start.
-            </p>
+            <div className="mt-1 rounded border border-border bg-background px-3 py-2">
+              <span className="font-semibold text-foreground">First timer tip:</span> Arrive early around 1400–1500. Use that extra time to talk to the people in your platoon, eat something, hydrate, and mentally prepare. Just relax — because once the game starts, that's it.
+            </div>
           </div>
         </div>
 
@@ -111,10 +111,26 @@ export default function BeforeYouGoPage() {
 
             <ol className="flex flex-col gap-3">
               {[
-                { step: "01", text: "Arrive and go directly to your assigned platoon area — don't set up camp first." },
-                { step: "02", text: "Lay out your gear. A cadre (the admin or faction leader) will do your back check-in — they inspect all red-highlighted items from your orders and initial each one off." },
-                { step: "03", text: "Once your gear check is signed off, head to chrono. Your replica must pass the FPS check to play." },
-                { step: "04", text: "If you're running a BFA (Blank Firing Adapter), let the cadre know at back check-in — there's a separate process for blanks and they'll point you in the right direction." },
+                {
+                  step: "01",
+                  text: "When you arrive, go directly to your assigned platoon area. Do not set up camp — you are not camping at the spawn or check-in area.",
+                },
+                {
+                  step: "02",
+                  text: "Find the bag check-in area. There will be a group of people with a cadre calling out items from the packing list — that's where you lay your gear out for inspection, not where you lined up with your platoon.",
+                },
+                {
+                  step: "03",
+                  text: "The cadre inspects all red-highlighted items and initials them off on your orders. Once every item is checked, you're cleared to move on.",
+                },
+                {
+                  step: "04",
+                  text: "Head to chrono. Your replica must pass the FPS check to play.",
+                },
+                {
+                  step: "05",
+                  text: "Running a BFA (Blank Firing Adapter)? Let the cadre know at back check-in — there's a separate process and they'll point you in the right direction.",
+                },
               ].map(({ step, text }) => (
                 <li key={step} className="flex items-start gap-3">
                   <span className="font-mono text-xs font-bold text-tactical shrink-0 mt-0.5">{step}</span>
@@ -123,7 +139,6 @@ export default function BeforeYouGoPage() {
               ))}
             </ol>
 
-            {/* Links to other sections */}
             <div className="mt-2 flex flex-wrap gap-3">
               <Link
                 href="/newbie/milsim-west/gear"
@@ -151,11 +166,15 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              MSW does not allow DMRs. You're running a standard AEG. Check the specific event's orders for the exact FPS limit — it's typically around <span className="font-semibold text-foreground">400 FPS with 0.20g BBs</span>.
+              MSW does not allow DMRs — standard AEGs only. Check your specific event's deployment orders for the exact FPS limit.
             </p>
-            <p>
-              If your replica shoots over the limit it doesn't play — period. Know your gun before you show up.
-            </p>
+            <div className="flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-3 py-2">
+              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
+              <p>
+                <span className="font-semibold text-foreground">Do not bring your own BBs.</span>{" "}
+                BBs are provided at the event. Leave yours at home.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -166,8 +185,10 @@ export default function BeforeYouGoPage() {
           // DAY-OF CHECKLIST
         </h2>
         <p className="mb-6 text-sm text-muted-foreground">
-          The essentials for arriving. For faction-specific gear and full loadout see the{" "}
-          <Link href="/newbie/milsim-west/gear" className="text-tactical hover:underline">Gear Guide</Link>.
+          The essentials for arriving. For full loadout and faction-specific gear see the{" "}
+          <Link href="/newbie/milsim-west/gear" className="text-tactical hover:underline">
+            Gear Guide
+          </Link>.
         </p>
         <div className="grid gap-2 sm:grid-cols-2">
           {ARRIVAL_CHECKLIST.map((item) => (
