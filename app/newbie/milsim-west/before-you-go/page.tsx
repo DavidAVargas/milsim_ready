@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, AlertTriangle, Clock, Mail, MapPin, CheckCircle2, ShieldCheck } from "lucide-react";
+import { ChevronLeft, ChevronRight, AlertTriangle, Clock, Mail, MapPin, CheckCircle2, ShieldCheck, HeartPulse, Dumbbell } from "lucide-react";
 import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 
 const ARRIVAL_CHECKLIST = [
   "Printed deployment orders (in a ziplock bag — keep them dry)",
+  "Medical card (in the same ziplock bag as your orders)",
   "Valid government-issued photo ID",
   "All red-highlighted gear from your deployment orders",
+  "Eye protection (full seal, ANSI rated)",
   "Airsoft replica + magazines (no BBs — provided at the event)",
-  "Red light flashlight (no white lights at night)",
   "Cash (~$50 for patches and miscellaneous)",
   "Personal medications",
 ];
@@ -61,10 +62,10 @@ export default function BeforeYouGoPage() {
               <span className="font-semibold text-foreground">Check your email and print them the moment they arrive.</span>
             </p>
             <p>
-              Your orders are a printed document with the event name, address, and a checklist at the bottom. That checklist is what the cadre uses during back check-in — they go through each item and initial it off. You need every red item on that list checked and signed before you can play.
+              Your orders are a printed document with the event name, address, and a checklist at the bottom. That checklist is what the cadre uses during bag check-in — they go through each item and initial it off. You need every red item on that list checked and signed before you can play.
             </p>
             <p>
-              During the game, any leader or cadre can stop you at any time and ask to see your orders. If your check isn't signed off or your paper is gone, you're out mid-op. Keep them on you at all times.
+              During the game, any leader or cadre can stop you at any time and ask to see your orders. If your check list isn't signed off or your paper is gone, you're out mid-op. Keep them on you at all times.
             </p>
             <div className="mt-1 rounded border border-border bg-background px-3 py-2">
               <span className="font-semibold text-foreground">First timer tip:</span> Put your deployment orders in a ziplock sandwich bag before you leave. Rain, sweat, river crossings — anything can destroy paper out in the field. If a leader asks for your orders and the paper is destroyed, you're getting kicked. Keep them dry.
@@ -145,7 +146,7 @@ export default function BeforeYouGoPage() {
               <span className="font-semibold text-foreground">Do not arrive before 1400</span> — the venue is private property.
             </p>
             <p>
-              The game kicks off around <span className="font-semibold text-foreground">2200–0000 (10 PM – midnight)</span>. Be prepared — you could be up all night, which is pretty much a full 24 hours on your feet by the time the game is over.
+              The game kicks off around <span className="font-semibold text-foreground">2200–0000 (10 PM – midnight)</span>. Be prepared — you could be up all night.
             </p>
             <div className="rounded border border-border bg-background px-3 py-2">
               <span className="font-semibold text-foreground">First timer tip:</span> Arrive early around 1400–1500. After check-in, eat, hydrate, talk to your platoon — and if there's downtime, take a nap. Seriously. You're going to need it. Alternatively, if you're not far from the venue, arriving a little later gives you more time to rest at home before the long night ahead.
@@ -175,6 +176,64 @@ export default function BeforeYouGoPage() {
                 <span className="font-semibold text-foreground">Do not bring your own BBs.</span>{" "}
                 BBs are provided at the event. Leave yours at home.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Medical Card */}
+        <div className="border border-border bg-card p-6">
+          <div className="mb-4 flex items-center gap-3">
+            <HeartPulse size={18} className="shrink-0 text-tactical" />
+            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
+              Medical Card
+            </h2>
+          </div>
+          <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+            <p>
+              A medical card is a small piece of paper — laminated if you have it, written down if you don't — that stays on your person during the entire op. Sometimes cadre checks for it, sometimes they don't, but it's a listed item and more importantly it's a real safety tool.
+            </p>
+            <p>At minimum your medical card should include:</p>
+            <ul className="flex flex-col gap-1 pl-1">
+              {["Full name", "Home address", "Emergency contact name & phone number", "Blood type (if known)", "Any allergies", "Any medical conditions"].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <span className="text-tactical">—</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-1 rounded border border-border bg-background px-3 py-2">
+              <span className="font-semibold text-foreground">Tip:</span> Keep your medical card in the same ziplock bag as your deployment orders. One bag, two critical documents, both dry and accessible.
+            </div>
+          </div>
+        </div>
+
+        {/* Physical Fitness */}
+        <div className="border border-border bg-card p-6">
+          <div className="mb-4 flex items-center gap-3">
+            <Dumbbell size={18} className="shrink-0 text-tactical" />
+            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
+              Physical Fitness
+            </h2>
+          </div>
+          <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+            <p>
+              A lot of people look at milsim like it's a movie — cool gear, cool moments. What they don't see is that you're going to be on your feet for potentially 24+ hours straight, walking and hiking with a replica that gets heavy, plus a vest loaded with gear. It's not the military, but it's not a walk in the park either.
+            </p>
+            <p>
+              If you're not in decent shape, you're going to feel it — and nobody wants to be the person slowing their squad down or quitting because they can't keep up. Do yourself and your platoon a favor and prepare before showing up.
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {[
+                { label: "Go running", detail: "Build your cardio before the event. Even a few weeks of light running makes a difference." },
+                { label: "Train with weight", detail: "Practice walking or running with a weighted vest or your actual gear so your body isn't shocked on game day." },
+                { label: "Break in your boots", detail: "Do not show up in a fresh pair of boots. Wear them on runs and walks beforehand — blisters 10 hours into an op are brutal." },
+                { label: "Get sleep before", detail: "You're going to be up all night. Don't show up already running on empty." },
+              ].map(({ label, detail }) => (
+                <div key={label} className="rounded border border-border bg-background p-3">
+                  <p className="font-semibold text-foreground">{label}</p>
+                  <p className="mt-1 text-xs leading-relaxed">{detail}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
