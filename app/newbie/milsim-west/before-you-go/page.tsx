@@ -194,7 +194,7 @@ export default function BeforeYouGoPage() {
             </p>
             <p>At minimum your medical card should include:</p>
             <ul className="flex flex-col gap-1 pl-1">
-              {["Full name", "Home address", "Emergency contact name & phone number", "Blood type (if known)", "Any allergies", "Any medical conditions"].map((item) => (
+              {["Full name", "Home address", "Emergency contact name & phone number", "Any allergies", "Any medical conditions"].map((item) => (
                 <li key={item} className="flex items-center gap-2">
                   <span className="text-tactical">—</span>
                   <span>{item}</span>
@@ -202,7 +202,7 @@ export default function BeforeYouGoPage() {
               ))}
             </ul>
             <div className="mt-1 rounded border border-border bg-background px-3 py-2">
-              <span className="font-semibold text-foreground">Tip:</span> Keep your medical card in the same ziplock bag as your deployment orders. One bag, two critical documents, both dry and accessible.
+              <span className="font-semibold text-foreground">Tip:</span> Keep both your deployment orders and medical card in the same ziplock bag and store it in your left chest pocket. If something happens in the field, that's the first place anyone is going to look — make it easy to find fast.
             </div>
           </div>
         </div>
@@ -217,14 +217,14 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              A lot of people look at milsim like it's a movie — cool gear, cool moments. What they don't see is that you're going to be on your feet for potentially 24+ hours straight, walking and hiking with a replica that gets heavy, plus a vest loaded with gear. It's not the military, but it's not a walk in the park either.
+              Milsim looks cool from the outside — and it is — but the physical reality hits different once you're in it. You're carrying a loaded vest and a replica for potentially 24 hours straight, moving through terrain, staying alert, and doing it all while sleep deprived. Body shock is real. People have blacked out and thrown up within the first 30 minutes. This isn't meant to scare you — it's meant to make sure you actually show up ready.
             </p>
             <p>
-              If you're not in decent shape, you're going to feel it — and nobody wants to be the person slowing their squad down or quitting because they can't keep up. Do yourself and your platoon a favor and prepare before showing up.
+              Your fitness level directly affects your squad. One person who can't keep up slows everyone down and puts the team at a disadvantage. Put in the work before the event and you'll enjoy it a lot more.
             </p>
             <div className="grid gap-2 sm:grid-cols-2">
               {[
-                { label: "Go running", detail: "Build your cardio before the event. Even a few weeks of light running makes a difference." },
+                { label: "Go running", detail: "Be comfortable running 3 miles straight before the event. This op is a physical challenge — your cardio will be tested." },
                 { label: "Train with weight", detail: "Practice walking or running with a weighted vest or your actual gear so your body isn't shocked on game day." },
                 { label: "Break in your boots", detail: "Do not show up in a fresh pair of boots. Wear them on runs and walks beforehand — blisters 10 hours into an op are brutal." },
                 { label: "Get sleep before", detail: "You're going to be up all night. Don't show up already running on empty." },
