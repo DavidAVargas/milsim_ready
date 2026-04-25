@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight, Lock } from "lucide-react";
+import { ChevronRight, ChevronLeft, Lock } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,6 +29,15 @@ const ORGS = [
 export default function NewbiePage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
+      {/* Back button */}
+      <Link
+        href="/"
+        className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
+      >
+        <ChevronLeft size={14} />
+        BACK TO HOME
+      </Link>
+
       {/* Header */}
       <p className="mb-3 font-mono text-xs tracking-[0.3em] uppercase text-tactical">
         // NEWBIE GUIDE
