@@ -21,7 +21,7 @@ export default function RootLayout({
         <Providers>
           <div className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
             <Header />
-            <main>{children}</main>
+            <main className="flex flex-col">{children}</main>
             <Footer />
           </div>
         </Providers>
