@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { inter } from "@/utils/fonts";
 import Providers from "@/components/DarkLightMode/providers";
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
           <div className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
             <Header />
             <main>{children}</main>
-            <footer />
+            <Footer />
           </div>
         </Providers>
       </body>
