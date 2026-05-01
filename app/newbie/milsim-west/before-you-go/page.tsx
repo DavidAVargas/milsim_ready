@@ -13,7 +13,7 @@ const ARRIVAL_CHECKLIST = [
   "Medical card (in the same ziplock bag as your orders)",
   "Valid government-issued photo ID",
   "All red-highlighted gear from your deployment orders",
-  "Eye protection (full seal, ANSI rated)",
+  "Eye protection (full seal, ANSI rated) — on at all times, including while sleeping",
   "Airsoft replica + magazines (no BBs — provided at the event)",
   "Cash (~$50 for patches and miscellaneous)",
   "Personal medications",
@@ -37,13 +37,22 @@ export default function BeforeYouGoPage() {
         Read this before you leave the house.
       </p>
 
-      {/* Critical warning */}
-      <div className="mt-8 flex items-start gap-3 border border-tactical/40 bg-tactical/5 p-4">
-        <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
-        <p className="text-sm text-muted-foreground">
-          <span className="font-bold text-foreground">No deployment orders = no entry.</span>{" "}
-          MSW will not have your orders on hand. If you don't print them and bring them, you are not getting in — no exceptions.
-        </p>
+      {/* Critical warnings */}
+      <div className="mt-8 flex flex-col gap-3">
+        <div className="flex items-start gap-3 border border-tactical/40 bg-tactical/5 p-4">
+          <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
+          <p className="text-sm text-muted-foreground">
+            <span className="font-bold text-foreground">No deployment orders = no entry.</span>{" "}
+            MSW will not have your orders on hand. If you don't print them and bring them, you are not getting in — no exceptions.
+          </p>
+        </div>
+        <div className="flex items-start gap-3 border border-tactical/40 bg-tactical/5 p-4">
+          <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
+          <p className="text-sm text-muted-foreground">
+            <span className="font-bold text-foreground">Eye pro on at all times. No exceptions.</span>{" "}
+            During setup, during the op, during breaks, and yes — while you are sleeping. Getting caught without it is an ejection offense.
+          </p>
+        </div>
       </div>
 
       <div className="mt-12 flex flex-col gap-6">
