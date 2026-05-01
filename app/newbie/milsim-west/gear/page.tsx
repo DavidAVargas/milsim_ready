@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { ChevronLeft, AlertTriangle, CheckCircle2, Backpack, Package, Star } from "lucide-react";
+import { ChevronLeft, AlertTriangle, CheckCircle2, Package, Star } from "lucide-react";
 import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gear Guide — Milsim West",
-  description: "What you actually need for a Milsim West op. Required gear, assault pack, ruck, and field-tested recommendations.",
+  description: "What you actually need for a Milsim West op. Required gear, what to carry on you, and the reality of packing for 40–72 hours.",
 };
 
 const REQUIRED_GEAR = [
@@ -27,7 +27,7 @@ const REQUIRED_GEAR = [
   },
   {
     item: "2L of water minimum on your kit",
-    detail: "Must be accessible from your load bearing equipment — not buried in your ruck. You will drink this. Bring more than 2L total.",
+    detail: "Must be accessible from your load bearing equipment — not buried in your pack. You will drink this. Bring more than 2L total.",
   },
   {
     item: "Flashlight or headlamp with red lens mode",
@@ -35,7 +35,7 @@ const REQUIRED_GEAR = [
   },
   {
     item: "Chemlights",
-    detail: "Used for marking, signaling, and IFF (identifying friend from foe) at night. Bring several. Your platoon will tell you what color to use for your faction.",
+    detail: "Used for marking, signaling, and identifying friend from foe at night. Bring several. Your platoon will tell you what color to use for your faction.",
   },
   {
     item: "MSW Tourniquet (MSWTQ)",
@@ -43,34 +43,12 @@ const REQUIRED_GEAR = [
   },
   {
     item: "Printed deployment orders + photo ID",
-    detail: "Both must be on your person at all times during the event — not in your ruck. Keep them in a ziplock bag. See the Before You Go page for full details.",
+    detail: "Both must be on your person at all times — not in your pack. Keep them in a ziplock bag. See the Before You Go page for full details.",
   },
   {
     item: "Medical card",
     detail: "In your left breast or shoulder pocket. Name, address, emergency contact, allergies, medical conditions. Cadre knows where to look — make it easy to find.",
   },
-];
-
-const ASSAULT_PACK = [
-  { item: "Spare chemlights", detail: "You'll go through them faster than you think, especially on night ops." },
-  { item: "1x MRE", detail: "One meal ready to eat for the field. Don't eat it before the op starts." },
-  { item: "Spare batteries", detail: "Radio, AEG, flashlight, optic. All of them. Dead batteries mid-op are a squad problem." },
-  { item: "Spare socks + t-shirt", detail: "Wet feet wreck you over 24+ hours. One dry pair changes everything." },
-  { item: "10ft of 550 cord", detail: "Paracord. You'll find a use for it." },
-  { item: "Small roll of duct tape", detail: "Gear breaks. Tape fixes it temporarily until you can get back to your ruck." },
-  { item: "Emergency cold/wet weather layer", detail: "One compressible layer you can throw on fast if conditions turn." },
-];
-
-const RUCK = [
-  { item: "Sleeping bag + sleeping pad", detail: "Rated for the expected temps. Don't underestimate how cold nights get in the field, especially after sweating all day." },
-  { item: "Poncho or bivy", detail: "Rain cover for your sleeping setup. Wet sleep gear = miserable op." },
-  { item: "Food and water for two days", detail: "Don't rely on resupply. Bring enough to be self-sufficient for the full event." },
-  { item: "Cold/wet weather gear", detail: "Full set — jacket, pants, gloves, hat. Pack it even if the forecast looks clear." },
-  { item: "3x pairs of socks + extra underwear + t-shirts", detail: "The TACSOP specifically calls out three pairs of socks. Take that seriously." },
-  { item: "Personal hygiene kit", detail: "Toothbrush, toothpaste, deodorant, hand soap, towel. You're out there for days." },
-  { item: "Personal medications", detail: "Any prescription meds you need. Don't leave these in your car." },
-  { item: "2x large heavy-duty garbage bags", detail: "Pack in, pack out. MSW requires you to police call any area you rest in." },
-  { item: "Replica repair kit", detail: "Spare fuses, Allen keys, speed loader, anything specific to your AEG. A broken replica you can't fix is a long night." },
 ];
 
 export default function GearPage() {
@@ -87,7 +65,8 @@ export default function GearPage() {
       <p className="mb-3 font-mono text-xs tracking-[0.3em] uppercase text-tactical">// 02</p>
       <h1 className="font-mono text-3xl font-bold text-foreground sm:text-4xl">GEAR GUIDE</h1>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-        A 40–72 hour op is not a weekend airsoft game. What you bring — and how you pack it — directly affects how long you last. Start with the required gear and build from there.
+        A 40–72 hour op is not a weekend airsoft game. What you bring and how you carry it
+        directly affects how long you last. Start with what's required, then keep it practical.
       </p>
 
       <div className="mt-12 flex flex-col gap-10">
@@ -116,55 +95,85 @@ export default function GearPage() {
           </div>
         </div>
 
-        {/* Assault Pack */}
+        {/* What to Keep On You */}
         <div>
           <div className="mb-2 flex items-center gap-3">
-            <Backpack size={16} className="shrink-0 text-tactical" />
+            <CheckCircle2 size={16} className="shrink-0 text-tactical" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-              Assault Pack — On You During the Op
+              What to Keep On You
             </h2>
           </div>
-          <p className="mb-5 text-sm text-muted-foreground">
-            Your assault pack goes with you into the field. Keep it light enough to move in but stocked enough to sustain yourself between objectives.
-          </p>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {ASSAULT_PACK.map(({ item, detail }) => (
-              <div key={item} className="flex items-start gap-3 border border-border bg-card p-4">
-                <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" />
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{item}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{detail}</p>
-                </div>
-              </div>
-            ))}
+          <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+            <p>
+              The TACSOP lists an assault pack with a full loadout. The reality is most people don't roll
+              with a dedicated assault pack — your uniform pockets are bigger than you think and that's
+              where most of your field essentials live.
+            </p>
+            <p>
+              What you keep on you is personal, but the basics that make sense:{" "}
+              <span className="font-semibold text-foreground">a snack or two</span> (protein bar, beef jerky),{" "}
+              <span className="font-semibold text-foreground">any personal medications</span> you might need in the field,{" "}
+              <span className="font-semibold text-foreground">a notebook and pen</span> for intel and orders,
+              and a <span className="font-semibold text-foreground">poncho</span> that folds down small enough to fit in a cargo pocket.
+              That's it. Quick access, no digging through a bag mid-contact.
+            </p>
+            <div className="rounded border border-border bg-background px-3 py-2">
+              <span className="font-semibold text-foreground">The point:</span> anything you might need fast goes on your person. Anything you can afford to not touch for a few hours goes in your pack.
+            </div>
           </div>
         </div>
 
-        {/* Ruck */}
+        {/* The Ruck */}
         <div>
           <div className="mb-2 flex items-center gap-3">
             <Package size={16} className="shrink-0 text-tactical" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-              Rucksack — Your Overnight Kit
+              The Ruck — Get a Good One
             </h2>
           </div>
-          <p className="mb-5 text-sm text-muted-foreground">
-            Your ruck stays at your squad's bivouac or cache point — not on your back during every movement. Pack it like you won't see it again for 12 hours.
-          </p>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {RUCK.map(({ item, detail }) => (
-              <div key={item} className="flex items-start gap-3 border border-border bg-card p-4">
-                <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" />
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{item}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{detail}</p>
+          <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
+            <p>
+              Your ruck is not something you drop off at camp and forget about for 12 hours. You are
+              moving with it. You're rucking terrain with it on your back, and at some events you'll be
+              doing things like dismounting off a moving vehicle with it — so it needs to actually hold up.
+            </p>
+            <p>
+              <span className="font-semibold text-foreground">Do not buy a cheap pack.</span> A Chinese knockoff ruck
+              will break on you mid-event — seams blow out, straps fail, frames collapse. It has happened.
+              Cadre have actually inspected packs at check-in to make sure they're structurally sound enough
+              for what the op demands. Get a military surplus pack or a reputable brand.
+              You don't have to spend a fortune — surplus stores carry solid options.
+            </p>
+            <p>
+              Keep it light enough to actually move in. The TACSOP lists a lot of items for your ruck
+              and most of them are worth bringing — but pack smart. You need to be able to grab it and go.
+              At 4 AM when your platoon is moving out, you don't have time to break down a tent and reorganize
+              your kit. Sleep setup should pack in under two minutes.
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {[
+                { label: "Sleeping bag + pad", detail: "Rated for the expected temps. Cold nights after sweating all day are brutal — don't underpack your sleep system." },
+                { label: "Poncho or bivy", detail: "Rain cover. If your sleeping gear gets soaked you're done. Keep it waterproofed." },
+                { label: "Food and water for two days", detail: "Don't rely on resupply. Be self-sufficient. Eat before the op starts — don't burn through your field rations waiting around." },
+                { label: "Cold/wet weather layer", detail: "Even if the forecast looks clear. Conditions change and you'll be stationary for long stretches at night." },
+                { label: "Extra socks + dry clothes", detail: "Bring them. You probably won't have time to change as often as you'd like — but when you do get a window, dry socks make a real difference." },
+                { label: "Hygiene basics", detail: "Toothbrush, deodorant, hand soap. Reality is you might not use them every day. Bring them anyway for when you get the chance." },
+                { label: "Replica repair kit", detail: "Spare fuses, Allen keys, speed loader, anything specific to your AEG. A broken replica mid-op with nothing to fix it is a long night." },
+                { label: "2x heavy-duty garbage bags", detail: "MSW requires you to police call any area you rest in. Pack in, pack out." },
+              ].map(({ label, detail }) => (
+                <div key={label} className="flex items-start gap-3 border border-border bg-card p-4">
+                  <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" />
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{label}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{detail}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Personal Recommendations */}
+        {/* Field-Tested Picks */}
         <div>
           <div className="mb-2 flex items-center gap-3">
             <Star size={16} className="shrink-0 text-tactical" />
@@ -173,13 +182,13 @@ export default function GearPage() {
             </h2>
           </div>
           <p className="mb-5 text-sm text-muted-foreground">
-            Not required — just stuff that actually makes a difference once you're 20 hours in.
+            Not required. Just stuff that actually makes a difference once you're 20 hours in.
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
             {[
               {
                 label: "Electric hand warmer",
-                detail: "Cold nights in the field hit different when you've been sweating all day and suddenly stop moving. An electric hand warmer you can tuck into your kit keeps your hands functional and takes the edge off between movements. Recharges via USB — bring a power bank.",
+                detail: "Cold nights in the field hit different when you've been sweating all day and suddenly stop moving. An electric hand warmer tucked into your kit keeps your hands functional and takes the edge off between movements. Recharges via USB — bring a power bank.",
               },
             ].map(({ label, detail }) => (
               <div key={label} className="rounded border border-border bg-card p-4">
