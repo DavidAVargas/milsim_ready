@@ -160,6 +160,7 @@ export default function GearPage() {
                 { label: "Hygiene basics", detail: "Toothbrush, deodorant, hand soap. Reality is you might not use them every day. Bring them anyway for when you get the chance." },
                 { label: "Replica repair kit", detail: "Spare fuses, Allen keys, speed loader, anything specific to your AEG. A broken replica mid-op with nothing to fix it is a long night." },
                 { label: "2x heavy-duty garbage bags", detail: "MSW requires you to police call any area you rest in. Pack in, pack out." },
+                { label: "Bug spray", detail: "Easy to forget, annoying to be without. You're in the field for days — bugs are part of it." },
               ].map(({ label, detail }) => (
                 <div key={label} className="flex items-start gap-3 border border-border bg-card p-4">
                   <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" />
@@ -242,6 +243,18 @@ export default function GearPage() {
               {
                 label: "Vitamin C and immune support",
                 detail: "Pushing your body this hard can tank your immune system fast. Stuffy nose, feeling run down — it happens mid-op and it's miserable. Take immune support before the event and bring some to take throughout. Small thing, easy to forget, makes a difference.",
+              },
+              {
+                label: "Two pairs of gloves",
+                detail: "One pair for the field — it's going to get wet, dirty, and beat up. A second pair for cold nights or to rotate into when the first pair is soaked. Running bare-handed out there is miserable — bugs, terrain, weather. Keep your hands covered and have a dry backup.",
+              },
+              {
+                label: "Face mask / lower face protection",
+                detail: "It might not look as cool but it's worth it. Seen people get teeth shot out at events — it happens. A lower face mask or mesh mask protects your teeth and face the same way eye pro protects your eyes. If you care about your face, wear it. A mouthguard is an option too but a mask is more reliable.",
+              },
+              {
+                label: "Garmin watch",
+                detail: "If you have one, bring it. You can track your rucks, use the red torch for night vision-safe lighting, and some models have infrared mode. Most importantly — venues often have no cell signal and a Garmin lets your family track you via live tracking so they know you're alive out there. If you don't have one, any watch works. But if you do, it earns its place.",
               },
             ].map(({ label, detail }) => (
               <div key={label} className="rounded border border-border bg-card p-4">
