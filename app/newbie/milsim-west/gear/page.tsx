@@ -219,12 +219,43 @@ export default function GearPage() {
                 label: "Mini Cliff bars + GoGo Squeez applesauce",
                 detail: "For mornings or fast movements when there's no time for an MRE. Mini Cliff bars are easier to eat fast than the full-size ones — less chewing, less time. GoGo Squeez makes an active applesauce with electrolytes in it, so it doubles as a quick snack and an electrolyte hit. Keep two or three of each in your cargo pockets. Some mornings you get up and move immediately — this is your breakfast.",
               },
+              {
+                label: "Gore-Tex or waterproof jacket",
+                detail: "A poncho helps but it doesn't cover everything — rain comes in from every direction and somehow you still get wet. A Gore-Tex or waterproof jacket fills that gap. It blocks wind, keeps you dry in heavy rain, and doubles as an extra layer on cold nights under your hoodie. You can carry it on you or keep it in your ruck. Either way it earns its weight.",
+              },
+              {
+                label: "Hoodie or fleece — faction-appropriate colors",
+                detail: "Even if you're going to a desert event and it's hot during the day, when the sun drops it gets brutally cold — especially when you're wet and tired and not moving. People quit over this. On one op, four people got up at 2 AM and left because of the cold. A hoodie or fleece layer in your faction's color scheme is not optional — it's what keeps you in the fight.",
+              },
+              {
+                label: "Military canteen over a hydration pack on your vest",
+                detail: "A hydration pack mounted to your vest sounds convenient but becomes a problem once you put your ruck on — the pack behind your vest plus a ruck on your back is uncomfortable and makes rucking worse. A military canteen clips to your belt or to your ruck instead, so you can move water between both depending on what you need. More flexible, less annoying. Have at least 20+ oz of water with electrolytes on you at all times — not just a water bottle.",
+              },
+              {
+                label: "Caffeine — coffee and/or caffeine pouches",
+                detail: "You will be tired. Hot coffee in the morning when it's cold is both a functional energy source and a morale booster — it warms you up and gets you going at the same time. If you can figure out a quick way to make it in the field, bring it. Caffeine pouches are a fast alternative when there's no time to brew anything. If you're 18+ and use nicotine, some people bring nicotine patches for the same reason — focus and energy. Don't overdo any of it, just enough to take the edge off when you need it.",
+              },
+              {
+                label: "Morale items — gum, candy, something you enjoy",
+                detail: "This matters more than it sounds. When you're exhausted, cold, wet, and about to step into contact, something small that you enjoy genuinely helps. MREs come with gum — save them and use them when morale is lowest. Bring some extra and share with your team. Sharing snacks, electrolytes, or anything with your squad builds team cohesion and boosts everyone's morale. Talk to your teammates during downtime. Enjoy it — we're not Delta Force.",
+              },
+              {
+                label: "Vitamin C and immune support",
+                detail: "Pushing your body this hard can tank your immune system fast. Stuffy nose, feeling run down — it happens mid-op and it's miserable. Take immune support before the event and bring some to take throughout. Small thing, easy to forget, makes a difference.",
+              },
             ].map(({ label, detail }) => (
               <div key={label} className="rounded border border-border bg-card p-4">
                 <p className="font-semibold text-foreground text-sm">{label}</p>
                 <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{detail}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-4 rounded border border-border bg-card p-4">
+            <p className="text-sm font-semibold text-foreground mb-1">Before the op: carb load</p>
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              The night before or the morning of, eat a real carb-heavy meal — bread, pizza, burgers, whatever works. You are going to burn through carbs at a rate way above normal. Loading up beforehand means your body already has fuel in reserve when the op starts and you don't have time to eat. It makes a noticeable difference in how long you last before you start hitting the wall.
+            </p>
           </div>
         </div>
 
