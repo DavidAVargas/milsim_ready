@@ -182,18 +182,47 @@ export default function GearPage() {
             </h2>
           </div>
           <p className="mb-5 text-sm text-muted-foreground">
-            Not required. Just stuff that actually makes a difference once you're 20 hours in.
+            Not required. Personal experience — stuff that actually makes a difference once you're 20 hours in and the wheels start coming off.
           </p>
-          <div className="grid gap-2 sm:grid-cols-2">
+
+          <div className="flex flex-col gap-2">
             {[
               {
-                label: "Electric hand warmer",
-                detail: "Cold nights in the field hit different when you've been sweating all day and suddenly stop moving. An electric hand warmer tucked into your kit keeps your hands functional and takes the edge off between movements. Recharges via USB — bring a power bank.",
+                label: "Electric hand warmers — bring two",
+                detail: "One for your hands, one to tuck into your chest or sleeping bag. If you can keep your core warm, your whole body stays warm. Cold wet nights in the field are no joke — you've been sweating all day and then you stop moving and it hits you hard. These are small, compact, recharge via USB, and have saved some miserable nights. Bring a power bank to recharge them.",
+              },
+              {
+                label: "Waterproof bivy or sleeping bag cover",
+                detail: "This is the one thing that separates a rough night from a night that makes people quit. Rain puddles up and stays — it doesn't dry until the sun comes out. If your sleeping bag gets wet you're done. A waterproof bivy or sleeping bag cover keeps you dry without having to set up a full shelter, which you often won't have time to do anyway. The first night especially you're usually getting a quick 2–3 hours and moving out — a bivy means you're in and out fast.",
+              },
+              {
+                label: "Two ponchos minimum",
+                detail: "One isn't enough. One covers your gear, one covers you — and even then it's barely enough. The button-clip kind that can connect together give you the most flexibility. On fast nights where you know you're getting up early and don't want to deal with a full sleep setup, two ponchos thrown over you is the move. Quick in, quick out.",
+              },
+              {
+                label: "Wool or outdoor socks — plus one waterproof pair",
+                detail: "Bring three pairs of wool or outdoor-rated socks, not regular cotton socks. Cotton gets wet and stays wet. And bring at least one pair of waterproof hiking socks. On day two when your boots are soaked and muddy, putting on waterproof socks means your feet actually stay dry inside the wet boot. That one pair made a major difference — feet warmed up, stayed dry, kept moving.",
+              },
+              {
+                label: "Three batteries for your replica",
+                detail: "Two is the minimum, three is the right number. One is none. If your main battery fails mid-op — and it can — your spare gets you through. But if that one starts dying mid-game with no way to charge, you're done. Three means you always have something charged and ready. It's your primary weapon. Don't cheap out on this.",
+              },
+              {
+                label: "MREs over camping/freeze-dried food",
+                detail: "Camping food sounds good until you're in the field trying to boil water, wait for it to heat your food, and then actually eat — that whole process can take 30–45 minutes. An MRE is a full meal with a snack and drink and you can be done in under 30 minutes without any setup. Time and energy are currency out there. MREs are the better investment.",
+              },
+              {
+                label: "Electrolyte packs — non-negotiable",
+                detail: "Drinking water alone is not enough. You are moving, sweating, and exerting yourself at a level way above your normal daily output. Without electrolytes you're not actually replenishing what you're losing. Hallucination from dehydration is real — seeing people behind trees that aren't there, hearing things that aren't happening, not even realizing it's happening because it blends into what's going on around you. LMNT, Liquid IV, anything works. Drop one in your water and actually hydrate.",
+              },
+              {
+                label: "Mini Cliff bars + GoGo Squeez applesauce",
+                detail: "For mornings or fast movements when there's no time for an MRE. Mini Cliff bars are easier to eat fast than the full-size ones — less chewing, less time. GoGo Squeez makes an active applesauce with electrolytes in it, so it doubles as a quick snack and an electrolyte hit. Keep two or three of each in your cargo pockets. Some mornings you get up and move immediately — this is your breakfast.",
               },
             ].map(({ label, detail }) => (
               <div key={label} className="rounded border border-border bg-card p-4">
                 <p className="font-semibold text-foreground text-sm">{label}</p>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{detail}</p>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{detail}</p>
               </div>
             ))}
           </div>
