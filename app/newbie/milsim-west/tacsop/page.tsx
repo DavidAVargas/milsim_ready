@@ -110,12 +110,12 @@ export default function TacsopPage() {
                 {
                   step: "04",
                   label: "You get hit again while \"wounded\"",
-                  detail: "You are killed. No buddy aid this time — you need a medic or the company CCP.",
+                  detail: "You are killed. No buddy aid this time — you need a medic or the Company CCP (your faction's respawn zone — a marked area where medics cache IV water bottles).",
                 },
                 {
                   step: "05",
                   label: "Getting healed (dead → alive)",
-                  detail: "Find a Platoon Medic or the Company CCP. Drink an entire 16oz water bottle (the \"IV\"). Once it's gone, you're back in the fight.",
+                  detail: "Find a Platoon Medic or walk to the Company CCP (your faction's respawn zone). Drink an entire 16oz water bottle (the \"IV\"). Once it's gone, you're back in the fight.",
                 },
               ].map(({ step, label, detail }) => (
                 <div key={step} className="flex items-start gap-3 rounded border border-border bg-background p-3">
@@ -131,7 +131,7 @@ export default function TacsopPage() {
             <div className="mt-1 flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-3 py-2">
               <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
               <p className="text-xs leading-relaxed">
-                <span className="font-semibold text-foreground">When dead and moving to a medic or CCP:</span>{" "}
+                <span className="font-semibold text-foreground">When dead and moving to a medic or the Company CCP (your faction's respawn zone):</span>{" "}
                 hold your weapon over your head. This signals to everyone that you are out of the game. When healed, you lose all intel you had collected up to that point.
               </p>
             </div>
@@ -171,7 +171,6 @@ export default function TacsopPage() {
                 {[
                   "Stop playing immediately",
                   "Echo the command — yell EMERGENCY",
-                  "Display your safety flag",
                   "Stay exactly where you are and wait for cadre instructions",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -185,8 +184,7 @@ export default function TacsopPage() {
             <div>
               <p className="font-semibold text-foreground mb-2">Safety Flag</p>
               <p>
-                A red rag, VS-17 panel section, or yellow reflective belt worn around your body. Use it when going to the latrine, when you&apos;ve bled out and are walking to the CCP, or when leaving the event area for any reason.{" "}
-                <span className="font-semibold text-foreground">Using a safety flag to gain a tactical advantage is an immediate ejection.</span>
+                The TACSOP lists a safety flag (red rag or VS-17 panel) for signaling you&apos;re out of the game or leaving the AO. In practice this isn&apos;t something you&apos;ll commonly see enforced at events — but if your cadre references it, now you know what it is.
               </p>
             </div>
 
