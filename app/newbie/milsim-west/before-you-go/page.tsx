@@ -13,7 +13,7 @@ const ARRIVAL_CHECKLIST = [
   "Medical card (in the same ziplock bag as your orders)",
   "Valid government-issued photo ID",
   "All red-highlighted gear from your deployment orders",
-  "Eye protection (full seal, ANSI rated)",
+  "Eye protection (full seal, ANSI rated) — on at all times, including while sleeping",
   "Airsoft replica + magazines (no BBs — provided at the event)",
   "Cash (~$50 for patches and miscellaneous)",
   "Personal medications",
@@ -37,13 +37,22 @@ export default function BeforeYouGoPage() {
         Read this before you leave the house.
       </p>
 
-      {/* Critical warning */}
-      <div className="mt-8 flex items-start gap-3 border border-tactical/40 bg-tactical/5 p-4">
-        <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
-        <p className="text-sm text-muted-foreground">
-          <span className="font-bold text-foreground">No deployment orders = no entry.</span>{" "}
-          MSW will not have your orders on hand. If you don't print them and bring them, you are not getting in — no exceptions.
-        </p>
+      {/* Critical warnings */}
+      <div className="mt-8 flex flex-col gap-3">
+        <div className="flex items-start gap-3 border border-tactical/40 bg-tactical/5 p-4">
+          <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
+          <p className="text-sm text-muted-foreground">
+            <span className="font-bold text-foreground">No deployment orders = no entry.</span>{" "}
+            MSW will not have your orders on hand. If you don't print them and bring them, you are not getting in — no exceptions.
+          </p>
+        </div>
+        <div className="flex items-start gap-3 border border-tactical/40 bg-tactical/5 p-4">
+          <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
+          <p className="text-sm text-muted-foreground">
+            <span className="font-bold text-foreground">Eye pro on at all times. No exceptions.</span>{" "}
+            During setup, during the op, during breaks, and yes — while you are sleeping. Getting caught without it is an ejection offense.
+          </p>
+        </div>
       </div>
 
       <div className="mt-12 flex flex-col gap-6">
@@ -154,6 +163,13 @@ export default function BeforeYouGoPage() {
             <div className="rounded border border-border bg-background px-3 py-2">
               <span className="font-semibold text-foreground">Bonus tip:</span> Bring a separate water bottle and snacks that are NOT part of your game gear. You'll be on site for several hours before the game even starts — don't burn through your field rations just sitting around waiting. Eat before you go and keep your game food and water sealed for the actual op.
             </div>
+            <div className="flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-3 py-2">
+              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
+              <p className="text-sm">
+                <span className="font-semibold text-foreground">Do not go to your car to sleep after in-processing.</span>{" "}
+                Once you're checked in, going back to your car for any reason requires a cadre escort and full gear re-inspection. Going there to sleep means you are out of the event — no return, no exceptions.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -167,8 +183,8 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              Standard AEGs follow the same rules as any airsoft field —{" "}
-              <span className="font-semibold text-foreground">under 400 FPS</span>. Check your specific event's orders for the exact limit.
+              Standard AEGs are limited to{" "}
+              <span className="font-semibold text-foreground">366 fps measured with a 0.25g BB (1.5 joules)</span>. MSW chronos by joule energy, not raw FPS — the number on the screen changes depending on what BB weight the operator uses. Check your specific event's orders for the exact limit.
             </p>
             <div className="flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-3 py-2">
               <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />

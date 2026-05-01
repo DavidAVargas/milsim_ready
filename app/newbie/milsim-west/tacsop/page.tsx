@@ -155,8 +155,9 @@ export default function TacsopPage() {
             <div>
               <p className="font-semibold text-foreground mb-2">Eye Pro</p>
               <p>
-                On at all times. That means during setup, during the op, during breaks, and{" "}
-                <span className="font-semibold text-foreground">yes — while you are sleeping</span>.
+                <span className="font-semibold text-foreground underline">On at all times.</span>{" "}
+                That means during setup, during the op, during breaks, and{" "}
+                <span className="font-semibold text-foreground underline">yes — while you are sleeping</span>.
                 No exceptions. Getting caught without eye pro is an ejection offense.
               </p>
             </div>
