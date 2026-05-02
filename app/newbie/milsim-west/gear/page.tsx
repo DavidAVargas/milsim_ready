@@ -66,84 +66,78 @@ const RUCK_ITEMS = [
 const FIELD_PICKS = [
   {
     label: "Electric hand warmers — bring two",
-    detail: "One for your hands, one to tuck into your chest or sleeping bag. If you can keep your core warm, your whole body stays warm. Small, compact, rechargeable via USB. Bring a power bank.",
+    detail: "I bring two — one for my hands, one to tuck into my chest or sleeping bag. If you can keep your core warm, your whole body stays warm. Small, compact, rechargeable via USB. Bring a power bank.",
   },
   {
     label: "Waterproof bivy or sleeping bag cover",
-    detail: "The one thing that separates a rough night from a night that makes people quit. Rain puddles up and stays until the sun comes out. A bivy keeps you dry without setting up a shelter — and on the first night you're usually only getting 2–3 hours anyway.",
+    detail: "This is the one thing I wish I had on my first op. Rain puddles up and stays until the sun comes out. A bivy keeps you dry without setting up a shelter — and on the first night you're usually only getting 2–3 hours before you're moving out anyway.",
   },
   {
     label: "Two ponchos minimum",
-    detail: "One covers your gear, one covers you. The button-clip kind that connect together give you the most flexibility. Fast sleep setup for nights when you know you're moving out early.",
+    detail: "One covers your gear, one covers you. I use the button-clip kind that connect together. On fast nights when I know I'm moving out early, two ponchos thrown over me is the move — quick in, quick out.",
   },
   {
     label: "Gore-Tex or waterproof jacket",
-    detail: "A poncho helps but it doesn't cover everything. A waterproof jacket blocks wind, fills the gaps, and doubles as an extra layer on cold nights. Carries on you or sits in your ruck — either way it earns its weight.",
+    detail: "A poncho helps but it doesn't cover everything. I bring a Gore-Tex jacket to block wind and fill the gaps — it also doubles as an extra layer under my hoodie on cold nights. Carries on me or sits in my ruck either way.",
   },
   {
     label: "Hoodie or fleece — faction colors",
-    detail: "Even desert events get brutally cold after dark when you're wet and not moving. On one op, four people got up at 2 AM and left because of the cold. A mid-layer in your faction's color scheme is not optional — it's what keeps you in the fight.",
+    detail: "Even desert events get brutally cold after dark when you're wet and not moving. I've seen four people quit at 2 AM on one op just from the cold. A mid-layer in your faction's color scheme is not optional — it's what keeps you in the fight.",
   },
   {
     label: "Wool socks (x3) + one waterproof pair",
-    detail: "Three pairs of wool or outdoor-rated socks, not cotton. And at least one pair of waterproof hiking socks. On day two when your boots are soaked, waterproof socks mean your feet stay dry inside the wet boot. That pair was a game changer.",
+    detail: "I bring three pairs of wool or outdoor-rated socks — not cotton, cotton stays wet. And at least one pair of waterproof hiking socks. On day two when my boots were soaked, those waterproof socks kept my feet completely dry inside the wet boot. Game changer.",
   },
   {
     label: "Two pairs of gloves",
-    detail: "One field pair that will get wet and dirty. One clean dry pair for cold nights or when the first pair is soaked. Running bare-handed in the field is miserable — bugs, terrain, cold.",
+    detail: "One field pair that's going to get wet and dirty, and one clean dry pair to rotate into at night or when the first pair is soaked. I learned this the hard way — running bare-handed out there is miserable.",
   },
   {
     label: "Three batteries for your replica",
-    detail: "Two is the minimum, three is right. If your main fails mid-op your spare saves you — but if that one starts dying with no way to charge, you're done. Three means you always have something ready. Don't skimp on this.",
+    detail: "I bring three. One is none, two is one. My main battery failed mid-op once and my spare saved me — but I kept thinking what if that one dies too. Three means I always have something charged and ready. It's my primary weapon.",
   },
   {
     label: "Military canteen",
-    detail: "A hydration pack behind your vest plus a ruck on your back is uncomfortable. A military canteen clips to your belt or ruck instead — more flexible, less annoying. Keep 20+ oz of water with electrolytes on you at all times.",
+    detail: "I switched from a hydration pack on my vest after realizing how uncomfortable it was once my ruck went on — the pack behind my vest plus the ruck on my back was brutal. My military canteen clips to my belt or ruck instead. More flexible, much less annoying. I keep 20+ oz of water with electrolytes on me at all times.",
   },
   {
     label: "MREs over camping/freeze-dried food",
-    detail: "Camping food takes 30–45 min of setup. An MRE is a full meal, snack, and drink in under 30 with no boiling. Time and energy are currency out there. MREs win.",
+    detail: "I made the mistake of bringing camping food on my first op. Boiling water, soaking the food, eating — that whole process took 30–45 minutes. An MRE is a full meal, snack, and drink in under 30 with no setup. I switched to MREs and haven't looked back.",
   },
   {
     label: "Electrolyte packs — non-negotiable",
-    detail: "Water alone isn't enough. Hallucination from dehydration is real — seeing people that aren't there, hearing things that aren't happening, not realizing it's happening. LMNT, Liquid IV, anything. Drop one in your water and actually hydrate.",
+    detail: "I was drinking water on my first op and still hallucinating — seeing people behind trees that weren't there, hearing sounds that weren't happening, not even realizing it was happening. Water alone isn't enough. I use LMNT now but Liquid IV works too. Drop one in your water every time you refill.",
   },
   {
     label: "Mini Cliff bars + GoGo Squeez applesauce",
-    detail: "For mornings when there's no time for an MRE. Mini bars are faster to eat than full-size. GoGo Squeez active applesauce has electrolytes — quick snack and hydration in one. Keep a few in your cargo pockets. Some mornings this is your breakfast.",
+    detail: "For mornings when there's no time for an MRE. I keep mini Cliff bars in my cargo pockets — easier to eat fast than full-size. GoGo Squeez active applesauce has electrolytes built in, so it's a quick snack and hydration hit at the same time. Some mornings this is literally my breakfast.",
   },
   {
     label: "Caffeine — coffee and/or caffeine pouches",
-    detail: "Hot coffee when it's cold is both energy and a morale boost. Caffeine pouches work when there's no time to brew. Nicotine patches are another option for 18+. Don't overdo it — just enough to take the edge off.",
+    detail: "Hot coffee in the morning when it's cold is both energy and a morale boost for me — warms me up and gets me going at the same time. When there's no time to brew I use caffeine pouches. If you're 18+ and use nicotine, patches work the same way. Don't overdo it — just enough to take the edge off.",
   },
   {
     label: "Morale items — gum, candy, something you enjoy",
-    detail: "MREs come with gum — save them for when morale is lowest. Bring extra and share with your squad. Sharing something small with teammates genuinely helps. Talk to your team during downtime. Enjoy it — we're not Delta Force.",
+    detail: "MREs come with gum — I save mine for when morale is lowest, usually right before a push. I bring extra and share with my squad. Sharing something small with your team genuinely helps. Talk to your teammates on downtime. Enjoy it — we're not Delta Force.",
   },
   {
     label: "Face mask / lower face protection",
-    detail: "Seen people get teeth shot out at events — it happens. A lower face mask or mesh protects your face the same way eye pro protects your eyes. Wear it.",
+    detail: "I always keep my mask on. I've seen people get teeth shot out at events — it happens. A lower face mask or mesh protects your face the same way eye pro protects your eyes. You can fix a tooth but it's better to just not.",
   },
   {
     label: "Vitamin C and immune support",
-    detail: "Hard physical output can tank your immune system fast. Stuffy nose mid-op is miserable. Take it before the event and bring some along. Small, easy to forget, matters.",
+    detail: "Pushing my body this hard tanks my immune system fast — I start getting a stuffy nose and feeling run down. I take immune support before the event and bring some along. Small thing, easy to forget, but I notice the difference.",
   },
   {
     label: "Garmin watch",
-    detail: "Track your rucks, use the red torch for night-safe lighting, infrared mode on newer models. Most importantly — venues often have no cell signal and a Garmin lets family track you via live tracking. Any watch works, but if you have a Garmin, bring it.",
+    detail: "I bring mine every op. I use it to track rucks, for the red torch at night, and for live tracking so my family knows I'm alive when there's no cell signal at the venue. Any watch works — but if you have a Garmin, bring it.",
   },
   {
     label: "Compression underwear + hygiene basics",
-    detail: "You are not showering for three days. You are moving constantly. Regular cotton underwear will destroy you — chafing is a real problem most first-timers don't think about until it's too late. Get Under Armour or similar athletic compression boxer briefs, the longer kind that reach your thighs. Breathable, moisture-wicking, and built for this. Pack dude wipes for a quick field clean-up and baby powder for chafe prevention. Small things that make a massive difference by day two.",
+    detail: "You are not showering for three days and you're moving constantly. Regular cotton underwear will wreck you — chafing is a real problem most first-timers don't think about until it's too late. I wear Under Armour compression boxer briefs, the longer kind that reach the thighs. Breathable, moisture-wicking, no issues. I also pack dude wipes for a quick clean-up and baby powder for chafe prevention. Massive difference by day two.",
   },
 ];
 
-const NAV_SECTIONS = [
-  { id: "required", label: "Required Gear" },
-  { id: "on-you", label: "On You" },
-  { id: "ruck", label: "The Ruck" },
-  { id: "field-picks", label: "Field Picks" },
-];
 
 export default function GearPage() {
   return (
@@ -162,19 +156,6 @@ export default function GearPage() {
         A 40–72 hour op is not a weekend airsoft game. What you bring and how you carry it
         directly affects how long you last. Start with what's required, then keep it practical.
       </p>
-
-      {/* Jump nav */}
-      <div className="mt-8 flex flex-wrap gap-2">
-        {NAV_SECTIONS.map(({ id, label }) => (
-          <a
-            key={id}
-            href={`#${id}`}
-            className="inline-block border border-border bg-card px-3 py-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:border-tactical hover:text-tactical"
-          >
-            {label}
-          </a>
-        ))}
-      </div>
 
       <div className="mt-12 flex flex-col gap-14">
 
@@ -277,7 +258,7 @@ export default function GearPage() {
             </h2>
           </div>
           <p className="mb-5 text-sm text-muted-foreground">
-            Not required. Personal experience — stuff that makes a real difference once you're 20 hours in and the wheels start coming off.
+            Not required — this is what I personally bring and swear by. Stuff that made a real difference once I was 20 hours in and the wheels started coming off.
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
             {FIELD_PICKS.map(({ label, detail }) => (
