@@ -132,6 +132,10 @@ const FIELD_PICKS = [
     label: "Garmin watch",
     detail: "Track your rucks, use the red torch for night-safe lighting, infrared mode on newer models. Most importantly — venues often have no cell signal and a Garmin lets family track you via live tracking. Any watch works, but if you have a Garmin, bring it.",
   },
+  {
+    label: "Compression underwear + hygiene basics",
+    detail: "You are not showering for three days. You are moving constantly. Regular cotton underwear will destroy you — chafing is a real problem most first-timers don't think about until it's too late. Get Under Armour or similar athletic compression boxer briefs, the longer kind that reach your thighs. Breathable, moisture-wicking, and built for this. Pack dude wipes for a quick field clean-up and baby powder for chafe prevention. Small things that make a massive difference by day two.",
+  },
 ];
 
 const NAV_SECTIONS = [
