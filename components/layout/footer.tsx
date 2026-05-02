@@ -55,7 +55,7 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-border pt-6">
           <p className="font-mono text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} MILSIM — ALL RIGHTS RESERVED
+            &copy; {new Date().getFullYear()} MILSIMREADY — ALL RIGHTS RESERVED
           </p>
         </div>
       </div>

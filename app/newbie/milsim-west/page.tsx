@@ -4,7 +4,7 @@ import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Milsim West Guide — MILSIM",
+  title: "Milsim West Guide — MilsimReady",
   description: "The complete first-timer guide for Milsim West events.",
 };
 
