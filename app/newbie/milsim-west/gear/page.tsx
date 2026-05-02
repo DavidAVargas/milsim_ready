@@ -124,7 +124,7 @@ const FIELD_PICKS = [
   },
   {
     label: "Mini Cliff bars + GoGo Squeez applesauce",
-    detail: "For mornings when there's no time for an MRE. I keep mini Cliff bars in my cargo pockets — easier to eat fast than full-size. GoGo Squeez active applesauce has electrolytes built in, so it's a quick snack and hydration hit at the same time. Some mornings this is literally my breakfast.",
+    detail: "For mornings when there's no time for an MRE. I keep mini Cliff bars in my cargo pockets — easier to eat fast than full-size, and gives you some protein. GoGo Squeez active applesauce has electrolytes built in, quick squeeze and done. Some mornings this is literally my breakfast. The goal is food you can eat in 60 seconds without stopping or needing water. Think like an ultra marathon runner — honey packets, Stroopwafels, honey energy chews, crackers with peanut butter packets, fruit strips. Soft, fast, and calorie-dense. Whatever works for you.",
   },
   {
     label: "Caffeine — camping coffee + caffeine pouches",
