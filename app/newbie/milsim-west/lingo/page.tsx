@@ -91,7 +91,7 @@ export default function LingoPage() {
               {
                 level: "PLATOON",
                 label: "Your group — e.g. Platoon 1",
-                detail: "Led by your PL. This is the unit you belong to for the entire event. You'll know your platoon number from your deployment orders.",
+                detail: "Led by your PL. This is the unit you belong to for the entire event. After buying your ticket, join the private Facebook group for your faction — the link is on the MSW website. Your platoon and squad assignment gets posted there. If you want to team up with a friend, request it early or put their name in the comments when purchasing your ticket.",
                 indent: 1,
               },
               {

@@ -92,7 +92,10 @@ export default function BeforeYouGoPage() {
           </div>
           <div className="flex flex-col gap-4 text-sm leading-relaxed text-muted-foreground">
             <p>
-              Before the event, join the <span className="font-semibold text-foreground">MSW Facebook group for your faction</span>. Your platoon assignment will be posted there — know it before you arrive.
+              After purchasing your ticket, join the <span className="font-semibold text-foreground">private Facebook group for your faction</span> — the link is on the MSW website. Your platoon and squad assignment will be posted there. Know it before you arrive.
+            </p>
+            <p>
+              Want to team up with a friend? Request it early — either in the comments when buying your ticket or by reaching out to the group admins before the event. The earlier you ask, the easier it is for them to organize. Don't wait until you're already on site.
             </p>
             <ol className="flex flex-col gap-3">
               {[
