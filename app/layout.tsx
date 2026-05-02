@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "MilsimReady",
+  title: "Milsim Ready",
   description: "Gear up, learn the lingo, and survive your first milsim event.",
 };
 

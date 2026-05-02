@@ -23,7 +23,7 @@ export default function Header() {
           href="/"
           className="font-mono text-sm font-bold tracking-widest uppercase text-foreground hover:text-tactical transition-colors"
         >
-          MILSIMREADY
+          MILSIM READY
         </Link>
 
         {/* Desktop nav */}
