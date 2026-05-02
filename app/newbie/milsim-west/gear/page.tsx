@@ -218,10 +218,10 @@ export default function GearPage() {
             </p>
             <p>
               The other thing to keep in mind is that when you're down, the enemy can approach and ask
-              permission to search you. If they do, they can take loose food, ammo, and snacks off your person.
-              The less extra stuff you're carrying, the less you're handing over. Less weight also means
-              more mobility — especially when you're rucking most of the time anyway. Save the energy for
-              the actual movement.
+              permission to search you. They can ask if you're willing to give up snacks but you don't have
+              to — food is yours. What they can take is any loose ammo not loaded in a magazine: speed loaders,
+              ammo bags, anything not already in your mags is fair game. Less weight also means more mobility
+              — especially when you're rucking most of the time anyway. Save the energy for the actual movement.
             </p>
             <div className="rounded border border-border bg-card px-3 py-2">
               <span className="font-semibold text-foreground">The rule:</span> anything you might need fast goes on your person. Anything you can afford to not touch for a few hours goes in your ruck. If you have more to carry than your pockets fit, an assault pack is a valid option — just know the tradeoffs.
