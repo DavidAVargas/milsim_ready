@@ -73,7 +73,7 @@ export default function FactionsPage() {
       <div className="mt-8 border border-border bg-card p-5">
         <p className="font-mono text-xs font-bold tracking-widest uppercase text-foreground mb-2">How Assignment Works</p>
         <p className="text-sm leading-relaxed text-muted-foreground">
-          MSW assigns factions to keep numbers balanced on both sides. You may be able to request a side when you register, but it's not guaranteed. Make sure your kit matches your assigned faction — showing up in MultiCam on RUFOR or Flora on NATO is not going to fly. Check your deployment orders.
+          You pick your faction when you purchase your ticket — it's guaranteed. MSW balances the sides by capping each faction: once a faction sells out, it's full and you'll need to pick another. Register early if you have a preferred side. Make sure your kit matches your faction — showing up in MultiCam on RUFOR or Flora on NATO is not going to fly.
         </p>
       </div>
     </PageContainer>
