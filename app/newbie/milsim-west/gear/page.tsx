@@ -11,35 +11,23 @@ export const metadata: Metadata = {
 const REQUIRED_GEAR = [
   {
     item: "Uniform — correct faction camo",
-    detail: "Matching top and bottom in your faction's approved pattern. NATO = Original Multicam only. RUSFOR = any Russian camo. Militia = US Woodland, solid green, or any RUSFOR camo. Wrong camo = turned away at the gate, no refund.",
+    detail: "Matching top and bottom in your faction's approved pattern. NATO = Original Multicam only. RUSFOR = any Russian camo. Militia = US Woodland, solid green, or any RUSFOR camo. Wrong camo = turned away at the gate, no refund. Includes top, t-shirt, trousers with belt, and boots.",
+  },
+  {
+    item: "3x pairs of socks",
+    detail: "Three pairs minimum — this is a red-line checked item. Wool or outdoor-rated socks, not cotton.",
   },
   {
     item: "Eye protection — full seal, ANSI rated",
     detail: "Must be ANSI Z87.1 rated and full seal (no gaps around the lens). On at all times — including while sleeping. This is the one item cadre takes most seriously.",
   },
   {
-    item: "Load bearing equipment",
-    detail: "Plate carrier, chest rig, or belt rig. Must have magazine pouches, an admin pouch, and your MSW tourniquet rubber-banded to the outside of your kit where it's visible and accessible.",
-  },
-  {
     item: "Primary replica + mags + battery + charger + sling",
     detail: "Correct replica for your faction. Fully charged battery. Bring your charger — you'll be on site for hours before the op starts. Mid-cap or standard magazines only (no box/drum mags unless you're running an LMG or MMG).",
   },
   {
-    item: "2L of water minimum on your kit",
-    detail: "Must be accessible from your load bearing equipment — not buried in your pack. You will drink this. Bring more than 2L total.",
-  },
-  {
     item: "Flashlight or headlamp with red lens mode",
-    detail: "Red light preserves your night vision and doesn't blow your position. Must have this mode — white light only is not acceptable for a night op.",
-  },
-  {
-    item: "Chemlights",
-    detail: "Used for marking, signaling, and identifying friend from foe at night. Bring several. Your platoon will tell you what color to use for your faction.",
-  },
-  {
-    item: "MSW Tourniquet (MSWTQ)",
-    detail: "Issued to you at registration — do not lose it. Rubber-band it to your kit before the op starts, not pre-threaded through the tri-glide. That's for your buddy to do when they apply it.",
+    detail: "Red light preserves your night vision and doesn't blow your position. Cadre checks for this — white light only is not acceptable.",
   },
   {
     item: "Printed deployment orders + photo ID",
@@ -47,20 +35,45 @@ const REQUIRED_GEAR = [
   },
   {
     item: "Medical card",
-    detail: "In your left breast or shoulder pocket. Name, address, emergency contact, allergies, medical conditions. Cadre knows where to look — make it easy to find.",
+    detail: "In your left breast or shoulder pocket. Name, allergies, major medical conditions, current medications, and emergency contact info. Cadre knows where to look — make it easy to find.",
+  },
+  {
+    item: "Notepad and pen or pencil",
+    detail: "For writing down orders, intel, frequencies, and call signs during the op.",
+  },
+  {
+    item: "Wristwatch",
+    detail: "Required to keep accurate track of time and the op schedule.",
+  },
+  {
+    item: "Radio — FRS/GMRS (leadership only)",
+    detail: "Required for Platoon Leaders, Platoon Sergeants, Squad Leaders, and Team Leaders. If you're not in a leadership role you don't need one, but your leaders do.",
+  },
+  {
+    item: "Sleeping bag",
+    detail: "Required at bag inspection. See the ruck section below for what kind to get.",
+  },
+  {
+    item: "Food and water for two days",
+    detail: "Must be able to sustain yourself for the full event. Don't rely on resupply.",
+  },
+  {
+    item: "Cold/wet weather gear",
+    detail: "Checked at bag inspection. Required regardless of forecast — cadre enforces this.",
+  },
+  {
+    item: "2x heavy-duty garbage bags",
+    detail: "MSW requires you to police call any area you rest in. Pack in, pack out.",
   },
 ];
 
 const RUCK_ITEMS = [
-  { label: "Sleeping bag — get a good one", detail: "Rated for cold weather, even if the event is in a warm climate. Nights get freezing, especially when you're wet and exhausted. A quality bag also works in the heat — you can sleep on top of it. Don't cheap out on this." },
-  { label: "Sleeping pad — thermal rated", detail: "You lose most of your body heat through the ground. A cheap pad without thermal insulation will leave you freezing from below even with a good bag. Get off the cold floor." },
-  { label: "Tarp + poncho + bivy", detail: "All three serve a purpose. A small roll tarp (body-length, OCP if possible) goes on the ground under your pad to keep it off the dirt and bugs. Your bivy or sleeping bag cover goes around your sleeping bag for weatherproofing. Ponchos cover you and your gear on fast nights when there's no time for a full setup." },
-  { label: "Food and water for two days", detail: "Don't rely on resupply. Be self-sufficient. Eat before the op starts — don't burn through your field rations waiting around." },
-  { label: "Cold/wet weather layer", detail: "Even if the forecast looks clear. Conditions change and you'll be stationary for long stretches at night." },
-  { label: "Extra socks + dry clothes", detail: "Bring at least one extra combat shirt — changing your shirt when you get the chance makes a real difference. An extra pair of pants is nice but not necessary, you usually won't change them. Dry socks are non-negotiable." },
+  { label: "Sleeping bag — get a good one", detail: "Rated for cold weather even if the event is in a warm climate. Nights get freezing, especially when you're wet and exhausted. A quality bag also works in the heat — you can sleep on top of it. Don't cheap out on this." },
+  { label: "Sleeping pad — thermal rated", detail: "You lose most body heat through the ground. A cheap pad without thermal insulation will leave you freezing from below even with a good bag. Get off the cold floor." },
+  { label: "Tarp + poncho + bivy", detail: "All three serve a purpose. A roll tarp (body-length, OCP if possible) goes on the ground under your pad to keep it off dirt and bugs. Your bivy or sleeping bag cover goes around your sleeping bag for weatherproofing. Ponchos cover you and your gear on fast nights when there's no time for a full setup." },
+  { label: "Extra clothes", detail: "At least one extra combat shirt — changing your shirt when you get a window makes a real difference. An extra pair of pants is nice but not necessary, you usually won't change them." },
   { label: "Hygiene basics", detail: "Toothbrush, deodorant, hand soap. Reality is you might not use them every day. Bring them anyway for when you get the chance." },
   { label: "Replica repair kit", detail: "Spare fuses, Allen keys, speed loader, anything specific to your AEG. A broken replica mid-op with nothing to fix it is a long night." },
-  { label: "2x heavy-duty garbage bags", detail: "MSW requires you to police call any area you rest in. Pack in, pack out." },
   { label: "Bug spray", detail: "Easy to forget, annoying to be without. You're in the field for days — bugs are part of it." },
 ];
 
@@ -136,6 +149,10 @@ const FIELD_PICKS = [
   {
     label: "Compression underwear + hygiene basics",
     detail: "You are not showering for three days and you're moving constantly. Regular cotton underwear will wreck you — chafing is a real problem most first-timers don't think about until it's too late. I wear Under Armour compression boxer briefs, the longer kind that reach the thighs. Breathable, moisture-wicking, no issues. I also pack dude wipes for a quick clean-up and baby powder for chafe prevention. Massive difference by day two.",
+  },
+  {
+    label: "Waterproof bag for your clothes and sleep system — this is a must",
+    detail: "Pack your sleeping bag, extra clothes, socks, and hoodie inside a garbage bag or waterproof bag before putting them in your ruck. Your ruck can be left under a tree in the rain for hours. Even if it has a rain cover, moisture comes up from the ground too. If your sleeping bag and dry clothes get soaked there's no point in having them. I use one of the garbage bags I'm already required to bring. Everything that needs to stay dry gets sealed before it goes in the pack.",
   },
 ];
 
