@@ -52,11 +52,12 @@ const REQUIRED_GEAR = [
 ];
 
 const RUCK_ITEMS = [
-  { label: "Sleeping bag + pad", detail: "Rated for the expected temps. Cold nights after sweating all day are brutal — don't underpack your sleep system." },
-  { label: "Poncho or bivy", detail: "Rain cover. If your sleeping gear gets soaked you're done. Keep it waterproofed." },
+  { label: "Sleeping bag — get a good one", detail: "Rated for cold weather, even if the event is in a warm climate. Nights get freezing, especially when you're wet and exhausted. A quality bag also works in the heat — you can sleep on top of it. Don't cheap out on this." },
+  { label: "Sleeping pad — thermal rated", detail: "You lose most of your body heat through the ground. A cheap pad without thermal insulation will leave you freezing from below even with a good bag. Get off the cold floor." },
+  { label: "Tarp + poncho + bivy", detail: "All three serve a purpose. A small roll tarp (body-length, OCP if possible) goes on the ground under your pad to keep it off the dirt and bugs. Your bivy or sleeping bag cover goes around your sleeping bag for weatherproofing. Ponchos cover you and your gear on fast nights when there's no time for a full setup." },
   { label: "Food and water for two days", detail: "Don't rely on resupply. Be self-sufficient. Eat before the op starts — don't burn through your field rations waiting around." },
   { label: "Cold/wet weather layer", detail: "Even if the forecast looks clear. Conditions change and you'll be stationary for long stretches at night." },
-  { label: "Extra socks + dry clothes", detail: "Bring them. You probably won't have time to change as often as you'd like — but when you do get a window, dry socks make a real difference." },
+  { label: "Extra socks + dry clothes", detail: "Bring at least one extra combat shirt — changing your shirt when you get the chance makes a real difference. An extra pair of pants is nice but not necessary, you usually won't change them. Dry socks are non-negotiable." },
   { label: "Hygiene basics", detail: "Toothbrush, deodorant, hand soap. Reality is you might not use them every day. Bring them anyway for when you get the chance." },
   { label: "Replica repair kit", detail: "Spare fuses, Allen keys, speed loader, anything specific to your AEG. A broken replica mid-op with nothing to fix it is a long night." },
   { label: "2x heavy-duty garbage bags", detail: "MSW requires you to police call any area you rest in. Pack in, pack out." },
@@ -113,8 +114,8 @@ const FIELD_PICKS = [
     detail: "For mornings when there's no time for an MRE. I keep mini Cliff bars in my cargo pockets — easier to eat fast than full-size. GoGo Squeez active applesauce has electrolytes built in, so it's a quick snack and hydration hit at the same time. Some mornings this is literally my breakfast.",
   },
   {
-    label: "Caffeine — coffee and/or caffeine pouches",
-    detail: "Hot coffee in the morning when it's cold is both energy and a morale boost for me — warms me up and gets me going at the same time. When there's no time to brew I use caffeine pouches. If you're 18+ and use nicotine, patches work the same way. Don't overdo it — just enough to take the edge off.",
+    label: "Caffeine — camping coffee + caffeine pouches",
+    detail: "When I have time in the morning I make coffee with camping coffee pouches — boil water, pour it through the pouch, done. It warms you up and gets you going, especially on cold mornings. When there's no time, I use nicotine-free caffeine pouches — 80mg of caffeine, mint flavored, which also helps with hygiene. If you're 21+ and use nicotine, pouches or patches work too. Don't overdo it — just enough to take the edge off when you need it.",
   },
   {
     label: "Morale items — gum, candy, something you enjoy",
@@ -126,7 +127,7 @@ const FIELD_PICKS = [
   },
   {
     label: "Vitamin C and immune support",
-    detail: "Pushing my body this hard tanks my immune system fast — I start getting a stuffy nose and feeling run down. I take immune support before the event and bring some along. Small thing, easy to forget, but I notice the difference.",
+    detail: "Pushing this hard tanks your immune system fast. I start getting stuffy and run down when I overexert myself. If that happens to you out there, you're not alone — don't feel discouraged, you can still push through it. Take immune support before the event and bring some along to keep yourself going. Small thing, easy to forget.",
   },
   {
     label: "Garmin watch",
@@ -193,20 +194,20 @@ export default function GearPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              The TACSOP lists an assault pack with a full loadout. The reality is most people don't roll
-              with a dedicated assault pack — your uniform pockets are bigger than you think and that's
-              where most of your field essentials live.
+              Some people do run an assault pack and that's fine — it's optional. But personally I don't,
+              and here's why: your uniform cargo pockets are bigger than you think and they cover everything
+              you actually need fast access to. A snack or two, personal meds, notebook and pen, a poncho
+              that folds down small — that's it. No bag, no extra weight.
             </p>
             <p>
-              What you keep on you is personal, but the basics that make sense:{" "}
-              <span className="font-semibold text-foreground">a snack or two</span> (protein bar, beef jerky),{" "}
-              <span className="font-semibold text-foreground">any personal medications</span> you might need in the field,{" "}
-              <span className="font-semibold text-foreground">a notebook and pen</span> for intel and orders,
-              and a <span className="font-semibold text-foreground">poncho</span> that folds small enough to fit in a cargo pocket.
-              Quick access, no digging through a bag mid-contact.
+              The other thing to keep in mind is that when you're down, the enemy can approach and ask
+              permission to search you. If they do, they can take loose food, ammo, and snacks off your person.
+              The less extra stuff you're carrying, the less you're handing over. Less weight also means
+              more mobility — especially when you're rucking most of the time anyway. Save the energy for
+              the actual movement.
             </p>
             <div className="rounded border border-border bg-card px-3 py-2">
-              <span className="font-semibold text-foreground">The rule:</span> anything you might need fast goes on your person. Anything you can afford to not touch for a few hours goes in your pack.
+              <span className="font-semibold text-foreground">The rule:</span> anything you might need fast goes on your person. Anything you can afford to not touch for a few hours goes in your ruck. If you have more to carry than your pockets fit, an assault pack is a valid option — just know the tradeoffs.
             </div>
           </div>
         </div>
@@ -221,19 +222,23 @@ export default function GearPage() {
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
-              Your ruck is not something you drop off at camp and forget. You are moving with it —
-              rucking terrain, and at some events dismounting off a moving vehicle with it on your back.
-              It needs to hold up.
+              Your ruck is not something you drop off at camp and forget. You are rucking terrain with it
+              and at some events the truck you're on will be moving and you have to kick your ruck off the
+              vehicle onto the ground — it hits hard, it tumbles, it takes real abuse. You jump off separately
+              with your vest and kit on you. The bag needs to survive that.
             </p>
             <p>
-              <span className="font-semibold text-foreground">Do not buy a cheap pack.</span> A knockoff ruck
-              will blow out mid-event — seams fail, straps go, frames collapse. Cadre have actually inspected
-              packs at check-in for structural integrity. Get military surplus or a reputable brand.
-              Surplus stores are your best value.
+              <span className="font-semibold text-foreground">Do not buy a cheap pack.</span> I bought a knockoff
+              ruck for my first event and it broke on the second ruck — seams blew out, it was done. Cadre
+              have actually inspected packs at check-in for structural integrity because of exactly this.
+              Get military surplus or a reputable brand. Surplus stores are your best value.
             </p>
             <p>
-              Pack smart and pack fast. At 4 AM when your platoon moves out you don't have time to break down a tent.
-              Your sleep setup should pack in under two minutes.
+              Pack smart and pack fast. Sleeping at MSW isn't that you don't sleep — it's that it comes in
+              quick bursts. The first night is usually a short nap, maybe a couple hours, and you're moving
+              out before you've really settled in. Have a Plan B sleep setup you can throw together and break
+              down in under two minutes. The second day usually gives you a longer rest window where you can
+              actually set up your full system properly.
             </p>
             <div className="grid gap-2 sm:grid-cols-2 sm:grid-cols-3">
               {RUCK_ITEMS.map(({ label, detail }) => (
