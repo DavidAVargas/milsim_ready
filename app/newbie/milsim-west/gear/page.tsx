@@ -26,8 +26,8 @@ const REQUIRED_GEAR = [
     detail: "Correct replica for your faction. Fully charged battery. Bring your charger — you'll be on site for hours before the op starts. Mid-cap or standard magazines only (no box/drum mags unless you're running an LMG or MMG).",
   },
   {
-    item: "Flashlight or headlamp with red lens mode",
-    detail: "Red light preserves your night vision and doesn't blow your position. Cadre checks for this — white light only is not acceptable.",
+    item: "Flashlight or headlamp with red lens mode — you cannot play without this",
+    detail: "Red light is not optional. You cannot be on the field at night without one — cadre checks for it. Any red light works. Personally I recommend bringing two — someone on your team will forget theirs and you'll be glad you have a backup.",
   },
   {
     item: "Printed deployment orders + photo ID",
@@ -119,8 +119,8 @@ const FIELD_PICKS = [
     detail: "I made the mistake of bringing camping food on my first op. Boiling water, soaking the food, eating — that whole process took 30–45 minutes. An MRE is a full meal, snack, and drink in under 30 with no setup. I switched to MREs and haven't looked back.",
   },
   {
-    label: "Electrolyte packs — non-negotiable",
-    detail: "I was drinking water on my first op and still hallucinating — seeing people behind trees that weren't there, hearing sounds that weren't happening, not even realizing it was happening. Water alone isn't enough. I use LMNT now but Liquid IV works too. Drop one in your water every time you refill.",
+    label: "Electrolyte packs — this is a must, not a suggestion",
+    detail: "Drinking water by itself is not hydrating you. You must have electrolytes. I was drinking water constantly on my first op and still hallucinating — seeing people hiding behind trees that weren't there, hearing sounds that weren't happening. The dangerous part is you don't realize it's happening. There's no warning. It just starts and you don't even know when it began. I only figured it out when I noticed things that made no sense and started connecting the dots. Every time you refill your water, put an electrolyte packet in. LMNT, Liquid IV, anything. You are pushing your body way past its normal limits — water alone will not keep up with that.",
   },
   {
     label: "Mini Cliff bars + GoGo Squeez applesauce",
@@ -152,7 +152,7 @@ const FIELD_PICKS = [
   },
   {
     label: "Waterproof bag for your clothes and sleep system — this is a must",
-    detail: "Pack your sleeping bag, extra clothes, socks, and hoodie inside a garbage bag or waterproof bag before putting them in your ruck. Your ruck can be left under a tree in the rain for hours. Even if it has a rain cover, moisture comes up from the ground too. If your sleeping bag and dry clothes get soaked there's no point in having them. I use one of the garbage bags I'm already required to bring. Everything that needs to stay dry gets sealed before it goes in the pack.",
+    detail: "Pack your sleeping bag and your sleep system in one garbage bag, and your extra clothes, socks, and hoodie in another. Your ruck can sit under a tree in the rain for hours — even with a rain cover, moisture comes up from the ground. If your sleeping bag and dry clothes are soaked, you have nothing. I bring the required 2 garbage bags for trash plus 2 more specifically for waterproofing my gear inside my ruck. Everything that needs to stay dry gets sealed before it goes in the pack.",
   },
 ];
 
@@ -250,13 +250,17 @@ export default function GearPage() {
               have actually inspected packs at check-in for structural integrity because of exactly this.
               Get military surplus or a reputable brand. Surplus stores are your best value.
             </p>
-            <p>
-              Pack smart and pack fast. Sleeping at MSW isn't that you don't sleep — it's that it comes in
-              quick bursts. The first night is usually a short nap, maybe a couple hours, and you're moving
-              out before you've really settled in. Have a Plan B sleep setup you can throw together and break
-              down in under two minutes. The second day usually gives you a longer rest window where you can
-              actually set up your full system properly.
-            </p>
+            <div className="flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-4 py-3">
+              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
+              <p className="text-sm leading-relaxed">
+                <span className="font-semibold text-foreground">You are not getting 8 hours of sleep.</span>{" "}
+                Sleeping at MSW comes in quick bursts — the first night is usually a short nap, maybe a couple
+                hours, and you're moving before you've really settled in. Do not set up a full tent system
+                expecting to sleep through the night. Have a Plan B sleep setup you can throw together and
+                break down in under two minutes. The second day usually gives you a longer rest window where
+                you can actually use your full sleep system — but the first night, keep it fast.
+              </p>
+            </div>
             <div className="grid gap-2 sm:grid-cols-2 sm:grid-cols-3">
               {RUCK_ITEMS.map(({ label, detail }) => (
                 <div key={label} className="flex items-start gap-3 border border-border bg-card p-4">
