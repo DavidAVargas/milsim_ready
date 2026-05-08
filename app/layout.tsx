@@ -3,6 +3,7 @@ import { inter } from "@/utils/fonts";
 import Providers from "@/components/DarkLightMode/providers";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import PdfFab from "@/components/pdf/pdf-fab";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
             <Header />
             <main className="flex flex-col">{children}</main>
             <Footer />
+            <PdfFab />
           </div>
         </Providers>
       </body>
