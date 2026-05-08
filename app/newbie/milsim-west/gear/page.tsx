@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { ChevronLeft, AlertTriangle, CheckCircle2, Package, Star, User } from "lucide-react";
+import {
+  ChevronLeft, AlertTriangle, CheckCircle2, Package, Star, User,
+  Shirt, Footprints, Eye, Crosshair, Flashlight, FileText,
+  HeartPulse, PenLine, Watch, Radio, Moon, Utensils, CloudRain, Trash2
+} from "lucide-react";
 import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
@@ -10,58 +14,72 @@ export const metadata: Metadata = {
 
 const REQUIRED_GEAR = [
   {
+    icon: Shirt,
     item: "Uniform — correct faction camo",
     detail: "Matching top and bottom in your faction's approved pattern. NATO = Original Multicam only. RUSFOR = any Russian camo. Militia = US Woodland, solid green, or any RUSFOR camo. Wrong camo = turned away at the gate, no refund. Includes top, t-shirt, trousers with belt, and boots.",
   },
   {
+    icon: Footprints,
     item: "3x pairs of socks",
     detail: "Three pairs minimum — this is a red-line checked item. Wool or outdoor-rated socks, not cotton.",
   },
   {
+    icon: Eye,
     item: "Eye protection — full seal, ANSI rated",
     detail: "Must be ANSI Z87.1 rated and full seal (no gaps around the lens). On at all times — including while sleeping. This is the one item cadre takes most seriously.",
   },
   {
+    icon: Crosshair,
     item: "Primary replica + mags + battery + charger + sling",
     detail: "Correct replica for your faction. Fully charged battery. Bring your charger — you'll be on site for hours before the op starts. Mid-cap or standard magazines only (no box/drum mags unless you're running an LMG or MMG).",
   },
   {
-    item: "Flashlight or headlamp with red lens mode — you cannot play without this",
+    icon: Flashlight,
+    item: "Flashlight or headlamp with red lens mode",
     detail: "Red light is not optional. You cannot be on the field at night without one — cadre checks for it. Any red light works. Personally I recommend bringing two — someone on your team will forget theirs and you'll be glad you have a backup.",
   },
   {
+    icon: FileText,
     item: "Printed deployment orders + photo ID",
     detail: "Both must be on your person at all times — not in your pack. Keep them in a ziplock bag. See the Before You Go page for full details.",
   },
   {
+    icon: HeartPulse,
     item: "Medical card",
     detail: "In your left breast or shoulder pocket. Name, allergies, major medical conditions, current medications, and emergency contact info. Cadre knows where to look — make it easy to find.",
   },
   {
+    icon: PenLine,
     item: "Notepad and pen or pencil",
     detail: "For writing down orders, intel, frequencies, and call signs during the op.",
   },
   {
+    icon: Watch,
     item: "Wristwatch",
     detail: "Required to keep accurate track of time and the op schedule.",
   },
   {
+    icon: Radio,
     item: "Radio — FRS/GMRS (leadership only)",
     detail: "Required for Platoon Leaders, Platoon Sergeants, Squad Leaders, and Team Leaders. If you're not in a leadership role you don't need one, but your leaders do.",
   },
   {
+    icon: Moon,
     item: "Sleeping bag",
     detail: "Required at bag inspection. See the ruck section below for what kind to get.",
   },
   {
+    icon: Utensils,
     item: "Food and water for two days",
     detail: "Must be able to sustain yourself for the full event. Don't rely on resupply.",
   },
   {
+    icon: CloudRain,
     item: "Cold/wet weather gear",
     detail: "Checked at bag inspection. Required regardless of forecast — cadre enforces this.",
   },
   {
+    icon: Trash2,
     item: "2x heavy-duty garbage bags",
     detail: "MSW requires you to police call any area you rest in. Pack in, pack out.",
   },
@@ -78,84 +96,26 @@ const RUCK_ITEMS = [
 ];
 
 const FIELD_PICKS = [
-  {
-    label: "Electric hand warmers — bring two",
-    detail: "I bring two — one for my hands, one to tuck into my chest or sleeping bag. If you can keep your core warm, your whole body stays warm. Small, compact, rechargeable via USB. Bring a power bank.",
-  },
-  {
-    label: "Waterproof bivy or sleeping bag cover",
-    detail: "This is the one thing I wish I had on my first op. Rain puddles up and stays until the sun comes out. A bivy keeps you dry without setting up a shelter — and on the first night you're usually only getting 2–3 hours before you're moving out anyway.",
-  },
-  {
-    label: "Two ponchos minimum",
-    detail: "One covers your gear, one covers you. I use the button-clip kind that connect together. On fast nights when I know I'm moving out early, two ponchos thrown over me is the move — quick in, quick out.",
-  },
-  {
-    label: "Gore-Tex or waterproof jacket",
-    detail: "A poncho helps but it doesn't cover everything. I bring a Gore-Tex jacket to block wind and fill the gaps — it also doubles as an extra layer under my hoodie on cold nights. Carries on me or sits in my ruck either way.",
-  },
-  {
-    label: "Hoodie or fleece — faction colors",
-    detail: "Even desert events get brutally cold after dark when you're wet and not moving. I've seen four people quit at 2 AM on one op just from the cold. A mid-layer in your faction's color scheme is not optional — it's what keeps you in the fight.",
-  },
-  {
-    label: "Wool socks (x3) + one waterproof pair",
-    detail: "I bring three pairs of wool or outdoor-rated socks — not cotton, cotton stays wet. And at least one pair of waterproof hiking socks. On day two when my boots were soaked, those waterproof socks kept my feet completely dry inside the wet boot. Game changer.",
-  },
-  {
-    label: "Two pairs of gloves",
-    detail: "One field pair that's going to get wet and dirty, and one clean dry pair to rotate into at night or when the first pair is soaked. I learned this the hard way — running bare-handed out there is miserable.",
-  },
-  {
-    label: "Three batteries for your replica",
-    detail: "I bring three. One is none, two is one. My main battery failed mid-op once and my spare saved me — but I kept thinking what if that one dies too. Three means I always have something charged and ready. It's my primary weapon.",
-  },
-  {
-    label: "Military canteen",
-    detail: "I switched from a hydration pack on my vest after realizing how uncomfortable it was once my ruck went on — the pack behind my vest plus the ruck on my back was brutal. My military canteen clips to my belt or ruck instead. More flexible, much less annoying. I keep 20+ oz of water with electrolytes on me at all times.",
-  },
-  {
-    label: "MREs over camping/freeze-dried food",
-    detail: "I made the mistake of bringing camping food on my first op. Boiling water, soaking the food, eating — that whole process took 30–45 minutes. An MRE is a full meal, snack, and drink in under 30 with no setup. I switched to MREs and haven't looked back.",
-  },
-  {
-    label: "Electrolyte packs — this is a must, not a suggestion",
-    detail: "Drinking water by itself is not hydrating you. You must have electrolytes. I was drinking water constantly on my first op and still hallucinating — seeing people hiding behind trees that weren't there, hearing sounds that weren't happening. The dangerous part is you don't realize it's happening. There's no warning. It just starts and you don't even know when it began. I only figured it out when I noticed things that made no sense and started connecting the dots. Every time you refill your water, put an electrolyte packet in. LMNT, Liquid IV, anything. You are pushing your body way past its normal limits — water alone will not keep up with that.",
-  },
-  {
-    label: "Mini Cliff bars + GoGo Squeez applesauce",
-    detail: "For mornings when there's no time for an MRE. I keep mini Cliff bars in my cargo pockets — easier to eat fast than full-size, and gives you some protein. GoGo Squeez active applesauce has electrolytes built in, quick squeeze and done. Some mornings this is literally my breakfast. The goal is food you can eat in 60 seconds without stopping or needing water. Think like an ultra marathon runner — honey packets, Stroopwafels, honey energy chews, crackers with peanut butter packets, fruit strips. Soft, fast, and calorie-dense. Whatever works for you.",
-  },
-  {
-    label: "Caffeine — camping coffee + caffeine pouches",
-    detail: "When I have time in the morning I make coffee with camping coffee pouches — boil water, pour it through the pouch, done. It warms you up and gets you going, especially on cold mornings. When there's no time, I use nicotine-free caffeine pouches — 80mg of caffeine, mint flavored, which also helps with hygiene. If you're 21+ and use nicotine, pouches or patches work too. Don't overdo it — just enough to take the edge off when you need it.",
-  },
-  {
-    label: "Morale items — gum, candy, something you enjoy",
-    detail: "MREs come with gum — I save mine for when morale is lowest, usually right before a push. I bring extra and share with my squad. Sharing something small with your team genuinely helps. Talk to your teammates on downtime. Enjoy it — we're not Delta Force.",
-  },
-  {
-    label: "Face mask / lower face protection",
-    detail: "I always keep my mask on. I've seen people get teeth shot out at events — it happens. A lower face mask or mesh protects your face the same way eye pro protects your eyes. You can fix a tooth but it's better to just not.",
-  },
-  {
-    label: "Vitamin C and immune support",
-    detail: "Pushing this hard tanks your immune system fast. I start getting stuffy and run down when I overexert myself. If that happens to you out there, you're not alone — don't feel discouraged, you can still push through it. Take immune support before the event and bring some along to keep yourself going. Small thing, easy to forget.",
-  },
-  {
-    label: "Garmin watch",
-    detail: "I bring mine every op. I use it to track rucks, for the red torch at night, and for live tracking so my family knows I'm alive when there's no cell signal at the venue. Any watch works — but if you have a Garmin, bring it.",
-  },
-  {
-    label: "Compression underwear + hygiene basics",
-    detail: "You are not showering for three days and you're moving constantly. Regular cotton underwear will wreck you — chafing is a real problem most first-timers don't think about until it's too late. I wear Under Armour compression boxer briefs, the longer kind that reach the thighs. Breathable, moisture-wicking, no issues. I also pack dude wipes for a quick clean-up and baby powder for chafe prevention. Massive difference by day two.",
-  },
-  {
-    label: "Waterproof bag for your clothes and sleep system — this is a must",
-    detail: "Pack your sleeping bag and your sleep system in one garbage bag, and your extra clothes, socks, and hoodie in another. Your ruck can sit under a tree in the rain for hours — even with a rain cover, moisture comes up from the ground. If your sleeping bag and dry clothes are soaked, you have nothing. I bring the required 2 garbage bags for trash plus 2 more specifically for waterproofing my gear inside my ruck. Everything that needs to stay dry gets sealed before it goes in the pack.",
-  },
+  { label: "Electric hand warmers — bring two", detail: "I bring two — one for my hands, one to tuck into my chest or sleeping bag. If you can keep your core warm, your whole body stays warm. Small, compact, rechargeable via USB. Bring a power bank." },
+  { label: "Waterproof bivy or sleeping bag cover", detail: "This is the one thing I wish I had on my first op. Rain puddles up and stays until the sun comes out. A bivy keeps you dry without setting up a shelter — and on the first night you're usually only getting 2–3 hours before you're moving out anyway." },
+  { label: "Two ponchos minimum", detail: "One covers your gear, one covers you. I use the button-clip kind that connect together. On fast nights when I know I'm moving out early, two ponchos thrown over me is the move — quick in, quick out." },
+  { label: "Gore-Tex or waterproof jacket", detail: "A poncho helps but it doesn't cover everything. I bring a Gore-Tex jacket to block wind and fill the gaps — it also doubles as an extra layer under my hoodie on cold nights. Carries on me or sits in my ruck either way." },
+  { label: "Hoodie or fleece — faction colors", detail: "Even desert events get brutally cold after dark when you're wet and not moving. I've seen four people quit at 2 AM on one op just from the cold. A mid-layer in your faction's color scheme is not optional — it's what keeps you in the fight." },
+  { label: "Wool socks (x3) + one waterproof pair", detail: "I bring three pairs of wool or outdoor-rated socks — not cotton, cotton stays wet. And at least one pair of waterproof hiking socks. On day two when my boots were soaked, those waterproof socks kept my feet completely dry inside the wet boot. Game changer." },
+  { label: "Two pairs of gloves", detail: "One field pair that's going to get wet and dirty, and one clean dry pair to rotate into at night or when the first pair is soaked. I learned this the hard way — running bare-handed out there is miserable." },
+  { label: "Three batteries for your replica", detail: "I bring three. One is none, two is one. My main battery failed mid-op once and my spare saved me — but I kept thinking what if that one dies too. Three means I always have something charged and ready. It's my primary weapon." },
+  { label: "Military canteen", detail: "I switched from a hydration pack on my vest after realizing how uncomfortable it was once my ruck went on — the pack behind my vest plus the ruck on my back was brutal. My military canteen clips to my belt or ruck instead. More flexible, much less annoying. I keep 20+ oz of water with electrolytes on me at all times." },
+  { label: "MREs over camping/freeze-dried food", detail: "I made the mistake of bringing camping food on my first op. Boiling water, soaking the food, eating — that whole process took 30–45 minutes. An MRE is a full meal, snack, and drink in under 30 with no setup. I switched to MREs and haven't looked back." },
+  { label: "Electrolyte packs — this is a must, not a suggestion", detail: "Drinking water by itself is not hydrating you. You must have electrolytes. I was drinking water constantly on my first op and still hallucinating — seeing people hiding behind trees that weren't there, hearing sounds that weren't happening. The dangerous part is you don't realize it's happening. There's no warning. It just starts and you don't even know when it began. I only figured it out when I noticed things that made no sense and started connecting the dots. Every time you refill your water, put an electrolyte packet in. LMNT, Liquid IV, anything. You are pushing your body way past its normal limits — water alone will not keep up with that." },
+  { label: "Mini Cliff bars + GoGo Squeez applesauce", detail: "For mornings when there's no time for an MRE. I keep mini Cliff bars in my cargo pockets — easier to eat fast than full-size, and gives you some protein. GoGo Squeez active applesauce has electrolytes built in, quick squeeze and done. Some mornings this is literally my breakfast. The goal is food you can eat in 60 seconds without stopping or needing water. Think like an ultra marathon runner — honey packets, Stroopwafels, honey energy chews, crackers with peanut butter packets, fruit strips. Soft, fast, and calorie-dense. Whatever works for you." },
+  { label: "Caffeine — camping coffee + caffeine pouches", detail: "When I have time in the morning I make coffee with camping coffee pouches — boil water, pour it through the pouch, done. It warms you up and gets you going, especially on cold mornings. When there's no time, I use nicotine-free caffeine pouches — 80mg of caffeine, mint flavored, which also helps with hygiene. If you're 21+ and use nicotine, pouches or patches work too. Don't overdo it — just enough to take the edge off when you need it." },
+  { label: "Morale items — gum, candy, something you enjoy", detail: "MREs come with gum — I save mine for when morale is lowest, usually right before a push. I bring extra and share with my squad. Sharing something small with your team genuinely helps. Talk to your teammates on downtime. Enjoy it — we're not Delta Force." },
+  { label: "Face mask / lower face protection", detail: "I always keep my mask on. I've seen people get teeth shot out at events — it happens. A lower face mask or mesh protects your face the same way eye pro protects your eyes. You can fix a tooth but it's better to just not." },
+  { label: "Vitamin C and immune support", detail: "Pushing this hard tanks your immune system fast. I start getting stuffy and run down when I overexert myself. If that happens to you out there, you're not alone — don't feel discouraged, you can still push through it. Take immune support before the event and bring some along to keep yourself going. Small thing, easy to forget." },
+  { label: "Garmin watch", detail: "I bring mine every op. I use it to track rucks, for the red torch at night, and for live tracking so my family knows I'm alive when there's no cell signal at the venue. Any watch works — but if you have a Garmin, bring it." },
+  { label: "Compression underwear + hygiene basics", detail: "You are not showering for three days and you're moving constantly. Regular cotton underwear will wreck you — chafing is a real problem most first-timers don't think about until it's too late. I wear Under Armour compression boxer briefs, the longer kind that reach the thighs. Breathable, moisture-wicking, no issues. I also pack dude wipes for a quick clean-up and baby powder for chafe prevention. Massive difference by day two." },
+  { label: "Waterproof bag for your clothes and sleep system — this is a must", detail: "Pack your sleeping bag and your sleep system in one garbage bag, and your extra clothes, socks, and hoodie in another. Your ruck can sit under a tree in the rain for hours — even with a rain cover, moisture comes up from the ground. If your sleeping bag and dry clothes are soaked, you have nothing. I bring the required 2 garbage bags for trash plus 2 more specifically for waterproofing my gear inside my ruck. Everything that needs to stay dry gets sealed before it goes in the pack." },
 ];
-
 
 export default function GearPage() {
   return (
@@ -175,39 +135,39 @@ export default function GearPage() {
         directly affects how long you last. Start with what's required, then keep it practical.
       </p>
 
-      <div className="mt-12 flex flex-col gap-14">
+      <div className="mt-12 flex flex-col gap-16">
 
         {/* Required Gear */}
-        <div id="required">
-          <div className="mb-1 flex items-center gap-3">
-            <AlertTriangle size={16} className="shrink-0 text-tactical" />
-            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-              Required Gear — Bag Inspection
-            </h2>
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <AlertTriangle size={16} className="text-tactical shrink-0" />
+            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">Required Gear — Bag Inspection</h2>
           </div>
-          <p className="mb-5 text-sm text-muted-foreground">
+          <p className="mb-6 text-sm text-muted-foreground">
             These are the red-line items cadre checks before you can play. Missing any of them means you are not getting in.
           </p>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {REQUIRED_GEAR.map(({ item, detail }) => (
-              <div key={item} className="flex items-start gap-3 border border-border bg-card p-4">
-                <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" />
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{item}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{detail}</p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {REQUIRED_GEAR.map(({ icon: Icon, item, detail }) => (
+              <div key={item} className="flex flex-col border border-border bg-card p-5 gap-4">
+                {/* Icon + title row */}
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-center w-12 h-12 shrink-0 bg-tactical/10 border border-tactical/20">
+                    <Icon size={22} className="text-tactical" />
+                  </div>
+                  <p className="text-sm font-bold text-foreground leading-snug">{item}</p>
                 </div>
+                {/* Detail */}
+                <p className="text-xs leading-relaxed text-muted-foreground border-t border-border pt-3">{detail}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* What to Keep On You */}
-        <div id="on-you">
-          <div className="mb-1 flex items-center gap-3">
-            <User size={16} className="shrink-0 text-tactical" />
-            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-              What to Keep On You
-            </h2>
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <User size={16} className="text-tactical shrink-0" />
+            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">What to Keep On You</h2>
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
@@ -223,19 +183,17 @@ export default function GearPage() {
               ammo bags, anything not already in your mags is fair game. Less weight also means more mobility
               — especially when you're rucking most of the time anyway. Save the energy for the actual movement.
             </p>
-            <div className="rounded border border-border bg-card px-3 py-2">
+            <div className="border-l-4 border-tactical bg-card px-4 py-3 text-sm">
               <span className="font-semibold text-foreground">The rule:</span> anything you might need fast goes on your person. Anything you can afford to not touch for a few hours goes in your ruck. If you have more to carry than your pockets fit, an assault pack is a valid option — just know the tradeoffs.
             </div>
           </div>
         </div>
 
         {/* The Ruck */}
-        <div id="ruck">
-          <div className="mb-1 flex items-center gap-3">
-            <Package size={16} className="shrink-0 text-tactical" />
-            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-              The Ruck — Get a Good One
-            </h2>
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <Package size={16} className="text-tactical shrink-0" />
+            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">The Ruck — Get a Good One</h2>
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
             <p>
@@ -250,7 +208,7 @@ export default function GearPage() {
               have actually inspected packs at check-in for structural integrity because of exactly this.
               Get military surplus or a reputable brand. Surplus stores are your best value.
             </p>
-            <div className="flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-4 py-3">
+            <div className="flex items-start gap-3 border-l-4 border-tactical bg-tactical/5 px-4 py-3">
               <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
               <p className="text-sm leading-relaxed">
                 <span className="font-semibold text-foreground">You are not getting 8 hours of sleep.</span>{" "}
@@ -261,7 +219,7 @@ export default function GearPage() {
                 you can actually use your full sleep system — but the first night, keep it fast.
               </p>
             </div>
-            <div className="grid gap-2 sm:grid-cols-2 sm:grid-cols-3">
+            <div className="grid gap-2 sm:grid-cols-2 mt-2">
               {RUCK_ITEMS.map(({ label, detail }) => (
                 <div key={label} className="flex items-start gap-3 border border-border bg-card p-4">
                   <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" />
@@ -276,26 +234,27 @@ export default function GearPage() {
         </div>
 
         {/* Field-Tested Picks */}
-        <div id="field-picks">
-          <div className="mb-1 flex items-center gap-3">
-            <Star size={16} className="shrink-0 text-tactical" />
-            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
-              Field-Tested Picks
-            </h2>
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <Star size={16} className="text-tactical shrink-0" />
+            <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">Field-Tested Picks</h2>
           </div>
-          <p className="mb-5 text-sm text-muted-foreground">
+          <p className="mb-6 text-sm text-muted-foreground">
             Not required — this is what I personally bring and swear by. Stuff that made a real difference once I was 20 hours in and the wheels started coming off.
           </p>
-          <div className="grid gap-2 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {FIELD_PICKS.map(({ label, detail }) => (
-              <div key={label} className="rounded border border-border bg-card p-4">
-                <p className="font-semibold text-foreground text-sm">{label}</p>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{detail}</p>
+              <div key={label} className="border border-border bg-card p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <Star size={11} className="shrink-0 text-tactical fill-tactical" />
+                  <p className="font-mono text-xs font-bold text-foreground uppercase tracking-wide leading-snug">{label}</p>
+                </div>
+                <p className="text-xs leading-relaxed text-muted-foreground">{detail}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-4 rounded border border-border bg-card p-4">
+          <div className="mt-4 border-l-4 border-tactical bg-card px-5 py-4">
             <p className="text-sm font-semibold text-foreground mb-1">Before the op: carb load</p>
             <p className="text-xs leading-relaxed text-muted-foreground">
               The night before or the morning of, eat a real carb-heavy meal — bread, pizza, burgers, whatever works. You are going to burn through carbs at a rate way above normal. Loading up beforehand means your body already has fuel in reserve when the op starts and you don't have time to eat. It makes a noticeable difference in how long you last before hitting the wall.
