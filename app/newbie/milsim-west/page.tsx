@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight, ChevronLeft, ListChecks, Backpack, Crosshair, Radio, FileText, Users } from "lucide-react";
+import { ChevronLeft, ListChecks, Backpack, Crosshair, Radio, FileText, Users } from "lucide-react";
 import PageContainer from "@/components/layout/page-container";
 import type { Metadata } from "next";
 
@@ -49,7 +49,7 @@ const SECTIONS = [
     number: "06",
     Icon: Users,
     title: "Factions",
-    description: "NATO, RUFOR, and who else is on the field. Know your side before you show up.",
+    description: "NATO, RUFOR, and Militia. Know your side before you show up.",
   },
 ];
 
@@ -80,27 +80,29 @@ export default function MilsimWestPage() {
           <Link
             key={slug}
             href={`/newbie/milsim-west/${slug}`}
-            className="group relative flex flex-col gap-4 border border-border bg-card p-5 transition-all hover:border-tactical hover:-translate-y-0.5 hover:shadow-lg"
+            className="group relative flex flex-col gap-6 border border-border bg-card p-7 transition-all hover:border-tactical hover:-translate-y-0.5 hover:shadow-lg"
           >
-            {/* Icon — inherits foreground color, goes red in dark mode automatically */}
-            <Icon size={28} className="text-foreground transition-colors group-hover:text-tactical" />
-
-            <span className="absolute right-4 top-4 font-mono text-xs text-muted-foreground/40">
+            {/* Number */}
+            <span className="absolute right-5 top-5 font-mono text-xs font-bold text-muted-foreground/30">
               {number}
             </span>
+
+            {/* Icon block */}
+            <div className="flex items-center justify-center w-14 h-14 border border-border bg-background group-hover:border-tactical group-hover:bg-tactical/5 transition-all">
+              <Icon size={28} className="text-foreground transition-colors group-hover:text-tactical" />
+            </div>
 
             <div>
               <h2 className="font-mono text-base font-bold text-foreground transition-colors group-hover:text-tactical">
                 {title}
               </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {description}
               </p>
             </div>
 
-            <div className="mt-auto flex items-center gap-1 font-mono text-xs tracking-widest uppercase text-tactical opacity-0 transition-opacity group-hover:opacity-100">
-              OPEN <ChevronRight size={12} />
-            </div>
+            {/* Bottom tactical bar — animates in on hover */}
+            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-tactical scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
           </Link>
         ))}
       </div>

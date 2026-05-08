@@ -38,12 +38,6 @@ export default function Hero() {
         >
           GET BRIEFED
         </Link>
-        <Link
-          href="/events"
-          className="inline-block border border-border px-8 py-3 font-mono text-xs font-bold tracking-widest uppercase text-muted-foreground transition-colors hover:border-tactical hover:text-tactical"
-        >
-          VIEW EVENTS
-        </Link>
       </div>
 
       {/* Bottom fade */}
