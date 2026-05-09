@@ -97,6 +97,10 @@ export default function FieldGuidePage() {
               <span className="font-mono text-tactical font-bold shrink-0">03</span>
               Hit Download PDF — save it to your phone before you head out
             </li>
+            <li className="flex items-start gap-3">
+              <span className="font-mono text-tactical font-bold shrink-0">iOS</span>
+              <span>On iPhone, the PDF opens in your browser instead of downloading. Tap the <span className="font-mono text-foreground">Share</span> button at the bottom of the screen, then <span className="font-mono text-foreground">Save to Files</span>. Do this before you leave — not in the field.</span>
+            </li>
           </ol>
         </div>
 
