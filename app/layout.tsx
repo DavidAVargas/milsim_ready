@@ -9,6 +9,9 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   title: "Milsim Ready",
   description: "Gear up, learn the lingo, and survive your first milsim event.",
+  icons: {
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
