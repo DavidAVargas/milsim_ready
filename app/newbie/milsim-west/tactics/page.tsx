@@ -17,9 +17,9 @@ const REACT_TO_CONTACT = [
 
 const SPACING_RULES = [
   { label: "5–10m between each person", detail: "This is combat spacing. One grenade has a 15ft kill radius — if you're stacked on your buddy, you both die. Spread out." },
-  { label: "Never walk in a straight line", detail: "Single file on a trail is how your whole squad gets ambushed at once. Offset your spacing and use the terrain." },
+  { label: "Offset your spacing when you can", detail: "File formation is common in thick brush — that's fine. But on open trails, single file is how your whole squad gets ambushed at once. Use the terrain and stagger when you have room." },
   { label: "Don't cluster when stopped", detail: "When your element halts, face outward — everyone covers a different direction. This is 360 security. If everyone looks the same way, you have a blind side." },
-  { label: "Keep eyes on the person in front", detail: "Don't lose visual on your element. If the person ahead disappears, stop and wait — don't wander off." },
+  { label: "Scan your sector — but know where your element is", detail: "Sector awareness is the priority: always know what's in front of you. But while you're scanning, keep tabs on the person ahead. If they disappear, stop and wait — don't wander off trying to find them." },
 ];
 
 const COVER_TYPES = [

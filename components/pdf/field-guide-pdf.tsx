@@ -128,7 +128,7 @@ const SECTIONS: Record<string, () => React.ReactElement> = {
 
       <View style={s.card}>
         <Text style={s.cardTitle}>COMBAT SPACING</Text>
-        <Text style={s.cardText}>5–10m between each person. One grenade = 15ft kill radius. If you're stacked on your buddy, you both die. Spread out. Never walk single file in a straight line. When stopped, face outward — 360 security, everyone covers a different direction.</Text>
+        <Text style={s.cardText}>5–10m between each person. One grenade = 15ft kill radius. If you're stacked on your buddy, you both die. Spread out. File formation is fine in thick brush — but on open trails, offset your spacing and use the terrain. When stopped, face outward — 360 security, everyone covers a different direction.</Text>
       </View>
 
       <View style={s.card}>
