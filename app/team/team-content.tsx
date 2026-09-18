@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { X, ChevronLeft, ChevronRight, Move } from "lucide-react";
+import { useFocusTrap } from "@/lib/use-focus-trap";
 
 const MEMBERS = [
   { name: "Nick",    slug: "nick",    tags: [] as string[], photoCount: 2 },
@@ -123,16 +124,25 @@ function PhotoViewer({ target, onClose }: { target: GalleryTarget; onClose: () =
   const [current, setCurrent] = useState(0);
   const prev = () => setCurrent((c) => (c - 1 + photos.length) % photos.length);
   const next = () => setCurrent((c) => (c + 1) % photos.length);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(dialogRef, onClose);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" onClick={onClose}>
-      <div className="relative flex w-full max-w-4xl flex-col items-center gap-4" onClick={(e) => e.stopPropagation()}>
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="photo-viewer-heading"
+        className="relative flex w-full max-w-4xl flex-col items-center gap-4"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
         <div className="text-center">
           <p className="font-mono text-xs tracking-[0.3em] uppercase text-tactical mb-0.5">
             {isTeam ? "// TEAM" : "// OPERATOR"}
           </p>
-          <h2 className="font-mono text-sm font-bold uppercase text-white">
+          <h2 id="photo-viewer-heading" className="font-mono text-sm font-bold uppercase text-white">
             {isTeam ? "The Death Stalkers" : member!.name}
           </h2>
         </div>
@@ -179,9 +189,15 @@ export default function TeamContent() {
         <div
           role="button"
           tabIndex={0}
+          aria-label="View team photo gallery"
           className="group relative w-full h-[420px] overflow-hidden border border-border bg-black hover:border-tactical transition-colors cursor-pointer"
           onClick={() => setViewer({ kind: "team" })}
-          onKeyDown={(e) => e.key === "Enter" && setViewer({ kind: "team" })}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setViewer({ kind: "team" });
+            }
+          }}
         >
           <RepositionablePhoto
             src="/team/team7.jpeg"
@@ -206,13 +222,13 @@ export default function TeamContent() {
         <p className="mb-6 text-sm text-muted-foreground">Six operators. One squad.</p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {MEMBERS.map((member) => (
-            <div
+            <button
               key={member.name}
-              role="button"
-              tabIndex={0}
-              className="group flex flex-col border border-border bg-card text-left hover:border-tactical transition-colors cursor-pointer"
-              onClick={() => member.photoCount > 0 && setViewer({ kind: "member", member })}
-              onKeyDown={(e) => e.key === "Enter" && member.photoCount > 0 && setViewer({ kind: "member", member })}
+              type="button"
+              disabled={member.photoCount === 0}
+              aria-label={`View photos of ${member.name}`}
+              className="group flex flex-col border border-border bg-card text-left hover:border-tactical transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-border"
+              onClick={() => setViewer({ kind: "member", member })}
             >
               {member.photoCount > 0 ? (
                 <Photo
@@ -237,7 +253,7 @@ export default function TeamContent() {
                   </div>
                 )}
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

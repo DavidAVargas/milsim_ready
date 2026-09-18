@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -15,6 +15,21 @@ const NAV_LINKS = [
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
@@ -45,9 +60,12 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
+          ref={toggleRef}
           className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -55,7 +73,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="md:hidden border-t border-border bg-background px-4 py-4 flex flex-col gap-4">
+        <nav id="mobile-nav" className="md:hidden border-t border-border bg-background px-4 py-4 flex flex-col gap-4">
           {NAV_LINKS.map(({ label, href }) => (
             <Link
               key={href}
