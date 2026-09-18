@@ -105,8 +105,9 @@ function RepositionablePhoto({
             : "border-white/30 bg-black/50 text-white opacity-0 group-hover/repo:opacity-100"
         }`}
         title="Reposition photo"
+        aria-label="Reposition photo"
       >
-        <Move size={12} />
+        <Move size={12} aria-hidden="true" />
       </button>
     </div>
   );
@@ -155,18 +156,18 @@ function PhotoViewer({ target, onClose }: { target: GalleryTarget; onClose: () =
         {/* Navigation */}
         {photos.length > 1 && (
           <div className="flex items-center gap-4">
-            <button onClick={prev} className="border border-white/20 bg-black/60 p-1.5 text-white hover:bg-black/90 transition-colors">
-              <ChevronLeft size={16} />
+            <button onClick={prev} aria-label="Previous photo" className="border border-white/20 bg-black/60 p-1.5 text-white hover:bg-black/90 transition-colors">
+              <ChevronLeft size={16} aria-hidden="true" />
             </button>
             <p className="font-mono text-xs tracking-widest uppercase text-white/60">{current + 1} / {photos.length}</p>
-            <button onClick={next} className="border border-white/20 bg-black/60 p-1.5 text-white hover:bg-black/90 transition-colors">
-              <ChevronRight size={16} />
+            <button onClick={next} aria-label="Next photo" className="border border-white/20 bg-black/60 p-1.5 text-white hover:bg-black/90 transition-colors">
+              <ChevronRight size={16} aria-hidden="true" />
             </button>
           </div>
         )}
 
-        <button onClick={onClose} className="absolute -right-3 -top-3 border border-white/20 bg-black/80 p-1 text-white hover:bg-black transition-colors">
-          <X size={14} />
+        <button onClick={onClose} aria-label="Close photo viewer" className="absolute -right-3 -top-3 border border-white/20 bg-black/80 p-1 text-white hover:bg-black transition-colors">
+          <X size={14} aria-hidden="true" />
         </button>
       </div>
     </div>

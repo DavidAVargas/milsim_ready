@@ -59,7 +59,7 @@ export default function LingoPage() {
         href="/newbie/milsim-west"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
       >
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         BACK TO MILSIM WEST
       </Link>
 

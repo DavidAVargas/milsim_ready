@@ -124,7 +124,7 @@ export default function GearPage() {
         href="/newbie/milsim-west"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
       >
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         BACK TO MILSIM WEST
       </Link>
 
@@ -140,7 +140,7 @@ export default function GearPage() {
         {/* Required Gear */}
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <AlertTriangle size={16} className="text-tactical shrink-0" />
+            <AlertTriangle size={16} className="text-tactical shrink-0" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">Required Gear — Bag Inspection</h2>
           </div>
           <p className="mb-6 text-sm text-muted-foreground">
@@ -152,7 +152,7 @@ export default function GearPage() {
                 {/* Icon + title row */}
                 <div className="flex items-center gap-4">
                   <div className="flex items-center justify-center w-12 h-12 shrink-0 bg-tactical/10 border border-tactical/20">
-                    <Icon size={22} className="text-tactical" />
+                    <Icon size={22} className="text-tactical" aria-hidden="true" />
                   </div>
                   <p className="text-sm font-bold text-foreground leading-snug">{item}</p>
                 </div>
@@ -166,7 +166,7 @@ export default function GearPage() {
         {/* What to Keep On You */}
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <User size={16} className="text-tactical shrink-0" />
+            <User size={16} className="text-tactical shrink-0" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">What to Keep On You</h2>
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
@@ -192,7 +192,7 @@ export default function GearPage() {
         {/* The Ruck */}
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <Package size={16} className="text-tactical shrink-0" />
+            <Package size={16} className="text-tactical shrink-0" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">The Ruck — Get a Good One</h2>
           </div>
           <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
@@ -209,7 +209,7 @@ export default function GearPage() {
               Get military surplus or a reputable brand. Surplus stores are your best value.
             </p>
             <div className="flex items-start gap-3 border-l-4 border-tactical bg-tactical/5 px-4 py-3">
-              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
+              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
               <p className="text-sm leading-relaxed">
                 <span className="font-semibold text-foreground">You are not getting 8 hours of sleep.</span>{" "}
                 Sleeping at MSW comes in quick bursts — the first night is usually a short nap, maybe a couple
@@ -222,7 +222,7 @@ export default function GearPage() {
             <div className="grid gap-2 sm:grid-cols-2 mt-2">
               {RUCK_ITEMS.map(({ label, detail }) => (
                 <div key={label} className="flex items-start gap-3 border border-border bg-card p-4">
-                  <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" />
+                  <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-semibold text-foreground">{label}</p>
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{detail}</p>
@@ -236,7 +236,7 @@ export default function GearPage() {
         {/* Field-Tested Picks */}
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <Star size={16} className="text-tactical shrink-0" />
+            <Star size={16} className="text-tactical shrink-0" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">Field-Tested Picks</h2>
           </div>
           <p className="mb-6 text-sm text-muted-foreground">
@@ -246,7 +246,7 @@ export default function GearPage() {
             {FIELD_PICKS.map(({ label, detail }) => (
               <div key={label} className="border border-border bg-card p-5">
                 <div className="flex items-center gap-2 mb-3">
-                  <Star size={11} className="shrink-0 text-tactical fill-tactical" />
+                  <Star size={11} className="shrink-0 text-tactical fill-tactical" aria-hidden="true" />
                   <p className="font-mono text-xs font-bold text-foreground uppercase tracking-wide leading-snug">{label}</p>
                 </div>
                 <p className="text-xs leading-relaxed text-muted-foreground">{detail}</p>

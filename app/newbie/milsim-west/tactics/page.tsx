@@ -34,7 +34,7 @@ export default function TacticsPage() {
         href="/newbie/milsim-west"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
       >
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         BACK TO MILSIM WEST
       </Link>
 
@@ -86,7 +86,7 @@ export default function TacticsPage() {
               </div>
             ))}
             <div className="flex items-start gap-3 border border-tactical/40 bg-tactical/5 px-4 py-3">
-              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
+              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
               <p className="text-xs leading-relaxed text-muted-foreground">
                 <span className="font-semibold text-foreground">Grenade rule:</span> Soft cover does not save you from grenades or rockets. Only solid cover counts. If a grenade lands near you and all you have is bushes, you're dead.
               </p>
@@ -170,7 +170,7 @@ export default function TacticsPage() {
             ))}
           </div>
           <div className="mt-3 flex items-start gap-3 border border-tactical/40 bg-tactical/5 px-4 py-3">
-            <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
+            <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
             <p className="text-xs leading-relaxed text-muted-foreground">
               <span className="font-semibold text-foreground">Fratricide risk:</span> Make absolutely sure Alpha and Bravo are not in each other's line of fire. The L-shape only works if the two elements are shooting away from each other, not across.
             </p>

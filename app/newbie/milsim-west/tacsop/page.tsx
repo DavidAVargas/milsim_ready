@@ -33,7 +33,7 @@ export default function TacsopPage() {
         href="/newbie/milsim-west"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
       >
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         BACK TO MILSIM WEST
       </Link>
 
@@ -49,7 +49,7 @@ export default function TacsopPage() {
         {/* Hit Calling */}
         <div className="border border-border bg-card p-6">
           <div className="mb-4 flex items-center gap-3">
-            <ShieldCheck size={18} className="shrink-0 text-tactical" />
+            <ShieldCheck size={18} className="shrink-0 text-tactical" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
               Hit Calling & Integrity
             </h2>
@@ -79,7 +79,7 @@ export default function TacsopPage() {
         {/* Medical Mechanic */}
         <div className="border border-border bg-card p-6">
           <div className="mb-4 flex items-center gap-3">
-            <HeartPulse size={18} className="shrink-0 text-tactical" />
+            <HeartPulse size={18} className="shrink-0 text-tactical" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
               The Medical Mechanic
             </h2>
@@ -129,7 +129,7 @@ export default function TacsopPage() {
             </div>
 
             <div className="mt-1 flex items-start gap-3 rounded border border-tactical/40 bg-tactical/5 px-3 py-2">
-              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" />
+              <AlertTriangle size={14} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
               <p className="text-xs leading-relaxed">
                 <span className="font-semibold text-foreground">When dead and moving to a medic or the Company CCP (your faction's respawn zone):</span>{" "}
                 hold your weapon over your head. This signals to everyone that you are out of the game. When healed, you lose all intel you had collected up to that point.
@@ -145,7 +145,7 @@ export default function TacsopPage() {
         {/* Safety Rules */}
         <div className="border border-border bg-card p-6">
           <div className="mb-4 flex items-center gap-3">
-            <AlertTriangle size={18} className="shrink-0 text-tactical" />
+            <AlertTriangle size={18} className="shrink-0 text-tactical" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
               Safety Rules
             </h2>
@@ -202,7 +202,7 @@ export default function TacsopPage() {
         {/* What gets you kicked */}
         <div className="border border-border bg-card p-6">
           <div className="mb-4 flex items-center gap-3">
-            <Ban size={18} className="shrink-0 text-tactical" />
+            <Ban size={18} className="shrink-0 text-tactical" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
               What Gets You Ejected
             </h2>
@@ -223,7 +223,7 @@ export default function TacsopPage() {
         {/* Quick Reference */}
         <div className="border border-border bg-card p-6">
           <div className="mb-4 flex items-center gap-3">
-            <Hash size={18} className="shrink-0 text-tactical" />
+            <Hash size={18} className="shrink-0 text-tactical" aria-hidden="true" />
             <h2 className="font-mono text-sm font-bold tracking-widest uppercase text-foreground">
               Quick Reference Numbers
             </h2>
@@ -245,7 +245,7 @@ export default function TacsopPage() {
 
       {/* Footer note */}
       <div className="mt-12 flex items-start gap-3 border border-border bg-card p-4">
-        <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
+        <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
         <p className="text-sm text-muted-foreground">
           <span className="font-bold text-foreground">This is not the full rulebook.</span>{" "}
           Read the complete MSW TACSOP before your first event. Your platoon leaders and cadre are the final authority on rules calls during the op — if you&apos;re unsure, ask them.

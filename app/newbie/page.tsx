@@ -42,7 +42,7 @@ export default function NewbiePage() {
         href="/"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
       >
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         BACK TO HOME
       </Link>
 
@@ -74,7 +74,7 @@ export default function NewbiePage() {
                   <ChevronRight
                     size={16}
                     className="text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-tactical"
-                  />
+                  aria-hidden="true" />
                 </div>
                 <h2 className="font-mono text-xl font-bold text-foreground">
                   {org.name}
@@ -94,7 +94,7 @@ export default function NewbiePage() {
                   <span className="font-mono text-xs tracking-widest uppercase text-muted-foreground">
                     {org.tag}
                   </span>
-                  <Lock size={16} className="text-muted-foreground" />
+                  <Lock size={16} className="text-muted-foreground" aria-hidden="true" />
                 </div>
                 <h2 className="font-mono text-xl font-bold text-foreground">
                   {org.name}

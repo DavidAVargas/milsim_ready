@@ -20,7 +20,7 @@ export default function FieldGuidePage() {
       {/* Offline mode */}
       <div className="mt-12">
         <div className="flex items-center gap-3 mb-6">
-          <WifiOff size={18} className="text-tactical shrink-0" />
+          <WifiOff size={18} className="text-tactical shrink-0" aria-hidden="true" />
           <h2 className="font-mono text-lg font-bold text-foreground tracking-tight">OFFLINE MODE</h2>
         </div>
 
@@ -50,14 +50,14 @@ export default function FieldGuidePage() {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="border border-border p-4 flex items-start gap-3">
-            <Signal size={15} className="text-tactical mt-0.5 shrink-0" />
+            <Signal size={15} className="text-tactical mt-0.5 shrink-0" aria-hidden="true" />
             <div>
               <p className="font-mono text-xs font-bold tracking-widest uppercase text-foreground mb-1">No signal required</p>
               <p className="text-xs text-muted-foreground leading-relaxed">Once cached, the site loads fully even in dead zones — same pages, same content.</p>
             </div>
           </div>
           <div className="border border-border p-4 flex items-start gap-3">
-            <Smartphone size={15} className="text-tactical mt-0.5 shrink-0" />
+            <Smartphone size={15} className="text-tactical mt-0.5 shrink-0" aria-hidden="true" />
             <div>
               <p className="font-mono text-xs font-bold tracking-widest uppercase text-foreground mb-1">Works on any phone</p>
               <p className="text-xs text-muted-foreground leading-relaxed">iOS Safari, Android Chrome — no app install needed. Just use your browser.</p>
@@ -72,7 +72,7 @@ export default function FieldGuidePage() {
       {/* PDF Field Guide */}
       <div>
         <div className="flex items-center gap-3 mb-6">
-          <FileDown size={18} className="text-tactical shrink-0" />
+          <FileDown size={18} className="text-tactical shrink-0" aria-hidden="true" />
           <h2 className="font-mono text-lg font-bold text-foreground tracking-tight">PDF FIELD GUIDE</h2>
         </div>
 
@@ -106,14 +106,14 @@ export default function FieldGuidePage() {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="border border-border p-4 flex items-start gap-3">
-            <BatteryMedium size={15} className="text-tactical mt-0.5 shrink-0" />
+            <BatteryMedium size={15} className="text-tactical mt-0.5 shrink-0" aria-hidden="true" />
             <div>
               <p className="font-mono text-xs font-bold tracking-widest uppercase text-foreground mb-1">Saves battery</p>
               <p className="text-xs text-muted-foreground leading-relaxed">A PDF in your files app uses zero data and no browser needed — just open and read.</p>
             </div>
           </div>
           <div className="border border-border p-4 flex items-start gap-3">
-            <BookOpen size={15} className="text-tactical mt-0.5 shrink-0" />
+            <BookOpen size={15} className="text-tactical mt-0.5 shrink-0" aria-hidden="true" />
             <div>
               <p className="font-mono text-xs font-bold tracking-widest uppercase text-foreground mb-1">Pick what you need</p>
               <p className="text-xs text-muted-foreground leading-relaxed">Select only the sections you care about — keep it short or grab everything.</p>
@@ -146,7 +146,7 @@ export default function FieldGuidePage() {
             "Test offline: turn on airplane mode and reload the site to confirm it works",
           ].map((item) => (
             <div key={item} className="flex items-start gap-3">
-              <CheckCircle2 size={15} className="text-tactical mt-0.5 shrink-0" />
+              <CheckCircle2 size={15} className="text-tactical mt-0.5 shrink-0" aria-hidden="true" />
               <span className="text-sm text-muted-foreground">{item}</span>
             </div>
           ))}

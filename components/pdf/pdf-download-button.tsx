@@ -13,7 +13,7 @@ export default function PdfDownloadButton({ selected }: { selected: string[] }) 
     >
       {({ loading }) => (
         <>
-          <Download size={14} />
+          <Download size={14} aria-hidden="true" />
           {loading ? "GENERATING..." : "DOWNLOAD PDF"}
         </>
       )}

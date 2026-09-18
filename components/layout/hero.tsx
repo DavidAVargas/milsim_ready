@@ -36,16 +36,16 @@ export default function Hero() {
       <div className="mt-10 flex flex-col items-center gap-3">
         <div className="flex flex-wrap items-center justify-center gap-3">
           <div className="flex items-center gap-2 border border-border px-3 py-2 text-xs text-muted-foreground">
-            <WifiOff size={13} className="text-tactical" />
+            <WifiOff size={13} className="text-tactical" aria-hidden="true" />
             <span>Works offline — no signal needed in the field</span>
           </div>
           <div className="flex items-center gap-2 border border-border px-3 py-2 text-xs text-muted-foreground">
-            <FileDown size={13} className="text-tactical" />
+            <FileDown size={13} className="text-tactical" aria-hidden="true" />
             <span>Download a PDF field guide before you go</span>
           </div>
         </div>
         <div className="flex items-center gap-2 border border-border px-3 py-2 text-xs text-muted-foreground">
-          <Eye size={13} className="text-tactical" />
+          <Eye size={13} className="text-tactical" aria-hidden="true" />
           <span>Red light mode — preserves your night vision in the field</span>
         </div>
       </div>

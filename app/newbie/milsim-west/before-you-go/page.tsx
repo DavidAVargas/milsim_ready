@@ -26,7 +26,7 @@ export default function BeforeYouGoPage() {
         href="/newbie/milsim-west"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
       >
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         BACK TO MILSIM WEST
       </Link>
 
@@ -40,14 +40,14 @@ export default function BeforeYouGoPage() {
       {/* Critical warnings */}
       <div className="mt-8 flex flex-col gap-3">
         <div className="flex items-start gap-4 border-l-4 border-tactical bg-tactical/5 p-4">
-          <AlertTriangle size={20} className="shrink-0 text-tactical mt-0.5" />
+          <AlertTriangle size={20} className="shrink-0 text-tactical mt-0.5" aria-hidden="true" />
           <div>
             <p className="font-mono text-sm font-bold text-foreground">NO DEPLOYMENT ORDERS = NO ENTRY</p>
             <p className="mt-1 text-sm text-muted-foreground">MSW will not have your orders on hand. If you don't print them and bring them, you are not getting in — no exceptions.</p>
           </div>
         </div>
         <div className="flex items-start gap-4 border-l-4 border-tactical bg-tactical/5 p-4">
-          <AlertTriangle size={20} className="shrink-0 text-tactical mt-0.5" />
+          <AlertTriangle size={20} className="shrink-0 text-tactical mt-0.5" aria-hidden="true" />
           <div>
             <p className="font-mono text-sm font-bold text-foreground">EYE PRO ON AT ALL TIMES</p>
             <p className="mt-1 text-sm text-muted-foreground">During setup, during the op, during breaks, and yes — while you are sleeping. Getting caught without it is an ejection offense.</p>
@@ -61,7 +61,7 @@ export default function BeforeYouGoPage() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center justify-center w-14 h-14 border border-border bg-card">
-              <Mail size={28} className="text-tactical" />
+              <Mail size={28} className="text-tactical" aria-hidden="true" />
             </div>
             <div>
               <h2 className="font-mono text-lg font-bold text-foreground">Deployment Orders</h2>
@@ -89,7 +89,7 @@ export default function BeforeYouGoPage() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center justify-center w-14 h-14 border border-border bg-card">
-              <MapPin size={28} className="text-tactical" />
+              <MapPin size={28} className="text-tactical" aria-hidden="true" />
             </div>
             <div>
               <h2 className="font-mono text-lg font-bold text-foreground">Check-In Process</h2>
@@ -116,10 +116,10 @@ export default function BeforeYouGoPage() {
             </div>
             <div className="mt-2 flex flex-wrap gap-3">
               <Link href="/newbie/milsim-west/gear" className="inline-flex items-center gap-1 font-mono text-xs tracking-widest uppercase text-tactical hover:underline">
-                SEE GEAR GUIDE <ChevronRight size={11} />
+                SEE GEAR GUIDE <ChevronRight size={11} aria-hidden="true" />
               </Link>
               <Link href="/newbie/milsim-west/factions" className="inline-flex items-center gap-1 font-mono text-xs tracking-widest uppercase text-tactical hover:underline">
-                SEE FACTIONS <ChevronRight size={11} />
+                SEE FACTIONS <ChevronRight size={11} aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function BeforeYouGoPage() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center justify-center w-14 h-14 border border-border bg-card">
-              <Clock size={28} className="text-tactical" />
+              <Clock size={28} className="text-tactical" aria-hidden="true" />
             </div>
             <div>
               <h2 className="font-mono text-lg font-bold text-foreground">When to Arrive</h2>
@@ -162,7 +162,7 @@ export default function BeforeYouGoPage() {
               <span className="font-semibold text-foreground">Bonus tip:</span> Bring a separate water bottle and snacks that are NOT part of your game gear. You'll be on site for several hours before the game even starts — don't burn through your field rations just sitting around waiting. Eat before you go and keep your game food and water sealed for the actual op.
             </div>
             <div className="flex items-start gap-3 border-l-4 border-tactical bg-tactical/5 px-4 py-3">
-              <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
+              <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
               <p className="text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">Do not go to your car to sleep after in-processing.</span>{" "}
                 Once you're checked in, going back to your car for any reason requires a cadre escort and full gear re-inspection. Going there to sleep means you are out of the event — no return, no exceptions.
@@ -175,7 +175,7 @@ export default function BeforeYouGoPage() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center justify-center w-14 h-14 border border-border bg-card">
-              <ShieldCheck size={28} className="text-tactical" />
+              <ShieldCheck size={28} className="text-tactical" aria-hidden="true" />
             </div>
             <div>
               <h2 className="font-mono text-lg font-bold text-foreground">Chrono</h2>
@@ -191,7 +191,7 @@ export default function BeforeYouGoPage() {
               MSW chronos by joule energy, not raw FPS — the number on screen changes depending on BB weight the operator uses. Check your specific event's orders for the exact limit.
             </p>
             <div className="flex items-start gap-3 border-l-4 border-tactical bg-tactical/5 px-4 py-3">
-              <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" />
+              <AlertTriangle size={16} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
               <p className="text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">Do not bring your own BBs.</span>{" "}
                 BBs are provided at the event. Leave yours at home.
@@ -204,7 +204,7 @@ export default function BeforeYouGoPage() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center justify-center w-14 h-14 border border-border bg-card">
-              <HeartPulse size={28} className="text-tactical" />
+              <HeartPulse size={28} className="text-tactical" aria-hidden="true" />
             </div>
             <div>
               <h2 className="font-mono text-lg font-bold text-foreground">Medical Card</h2>
@@ -233,7 +233,7 @@ export default function BeforeYouGoPage() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center justify-center w-14 h-14 border border-border bg-card">
-              <Dumbbell size={28} className="text-tactical" />
+              <Dumbbell size={28} className="text-tactical" aria-hidden="true" />
             </div>
             <div>
               <h2 className="font-mono text-lg font-bold text-foreground">Physical Fitness</h2>
@@ -275,7 +275,7 @@ export default function BeforeYouGoPage() {
         <div className="grid gap-2 sm:grid-cols-2">
           {ARRIVAL_CHECKLIST.map(({ icon: Icon, text }) => (
             <div key={text} className="flex items-start gap-4 border border-border bg-card p-4">
-              <Icon size={18} className="mt-0.5 shrink-0 text-tactical" />
+              <Icon size={18} className="mt-0.5 shrink-0 text-tactical" aria-hidden="true" />
               <span className="text-sm text-muted-foreground">{text}</span>
             </div>
           ))}

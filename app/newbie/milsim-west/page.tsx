@@ -60,7 +60,7 @@ export default function MilsimWestPage() {
         href="/newbie"
         className="mb-8 inline-flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase text-muted-foreground transition-colors hover:text-tactical"
       >
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         BACK TO NEWBIE GUIDE
       </Link>
 
@@ -89,7 +89,7 @@ export default function MilsimWestPage() {
 
             {/* Icon block */}
             <div className="flex items-center justify-center w-14 h-14 border border-border bg-background group-hover:border-tactical group-hover:bg-tactical/5 transition-all">
-              <Icon size={28} className="text-foreground transition-colors group-hover:text-tactical" />
+              <Icon size={28} className="text-foreground transition-colors group-hover:text-tactical" aria-hidden="true" />
             </div>
 
             <div>

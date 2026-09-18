@@ -27,9 +27,9 @@ export function ThemeToggle() {
       }}
     >
       {resolvedTheme === "dark" ? (
-        <Sun className="text-dark size-4" />
+        <Sun className="text-dark size-4" aria-hidden="true" />
       ) : (
-        <Moon className="text-dark size-4" />
+        <Moon className="text-dark size-4" aria-hidden="true" />
       )}
 
       <span className="sr-only">Toggle theme</span>

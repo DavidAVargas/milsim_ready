@@ -42,8 +42,8 @@ function PdfPanel({
             <h2 id="pdf-fab-heading" className="font-mono text-lg font-bold text-foreground">Field Guide PDF</h2>
             <p className="text-xs text-muted-foreground mt-1">Highlight version — works offline in the field.</p>
           </div>
-          <button onClick={onClose} className="text-muted-foreground hover:text-foreground transition-colors mt-1">
-            <X size={18} />
+          <button onClick={onClose} aria-label="Close" className="text-muted-foreground hover:text-foreground transition-colors mt-1">
+            <X size={18} aria-hidden="true" />
           </button>
         </div>
 
@@ -83,7 +83,7 @@ function PdfPanel({
         {/* Download button */}
         {selected.length === 0 ? (
           <button disabled className="w-full flex items-center justify-center gap-2 bg-border text-muted-foreground font-mono text-xs tracking-widest uppercase py-3 cursor-not-allowed">
-            <Download size={14} />
+            <Download size={14} aria-hidden="true" />
             SELECT AT LEAST ONE
           </button>
         ) : (
@@ -112,7 +112,7 @@ export default function PdfFab() {
         className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-tactical text-white font-mono text-xs tracking-widest uppercase px-4 py-3 shadow-lg hover:opacity-90 transition-opacity"
         aria-label="Download field guide PDF"
       >
-        <FileDown size={15} />
+        <FileDown size={15} aria-hidden="true" />
         <span className="hidden sm:inline">Field Guide</span>
       </button>
 
