@@ -48,16 +48,22 @@ function PdfPanel({
         </div>
 
         {/* Section checkboxes */}
-        <div className="flex flex-col gap-2 mb-6">
+        <fieldset className="flex flex-col gap-2 mb-6">
+          <legend className="sr-only">Select which sections to include</legend>
           {SECTION_OPTIONS.map(({ key, label }) => (
-            <button
+            <label
               key={key}
-              type="button"
-              onClick={() => toggle(key)}
               className="flex items-center gap-3 cursor-pointer text-left w-full"
             >
+              <input
+                type="checkbox"
+                checked={selected.includes(key)}
+                onChange={() => toggle(key)}
+                className="peer sr-only"
+              />
               <div
-                className={`w-4 h-4 border flex items-center justify-center shrink-0 transition-colors ${
+                aria-hidden="true"
+                className={`w-4 h-4 border flex items-center justify-center shrink-0 transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-tactical peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-background ${
                   selected.includes(key) ? "bg-tactical border-tactical" : "border-border"
                 }`}
               >
@@ -70,9 +76,9 @@ function PdfPanel({
               <span className={`text-sm transition-colors ${selected.includes(key) ? "text-foreground font-medium" : "text-muted-foreground"}`}>
                 {label}
               </span>
-            </button>
+            </label>
           ))}
-        </div>
+        </fieldset>
 
         {/* Download button */}
         {selected.length === 0 ? (

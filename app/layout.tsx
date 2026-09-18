@@ -23,10 +23,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.variable}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-tactical focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:font-bold focus:tracking-widest focus:uppercase focus:text-tactical-foreground"
+        >
+          Skip to main content
+        </a>
         <Providers>
           <div className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
             <Header />
-            <main className="flex flex-col">{children}</main>
+            <main id="main-content" tabIndex={-1} className="flex flex-col outline-none">
+              {children}
+            </main>
             <Footer />
             <PdfFab />
           </div>
